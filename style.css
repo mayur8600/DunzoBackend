@@ -5,14 +5,14 @@
 }
 
 header {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     display: flex;
     flex-direction: column;
     padding-top: 72px;
 }
 
 .container {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     display: flex;
     height: 72px;
     position: fixed;
@@ -27,17 +27,16 @@ header {
 }
 
 .row {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     width: 100%;
-    /* margin: 0px auto; */
-    margin: auto;
+    margin: 0px auto;
     padding-left: 0px;
     padding-right: 0px;
     max-width: 1024px;
 }
 
 .col {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: justify;
@@ -46,7 +45,7 @@ header {
 }
 
 .col1 {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     display: flex;
     overflow: hidden;
     flex: 1 1 0%;
@@ -62,13 +61,17 @@ header {
 }
 
 .logo {
-    box-sizing: content-box;
+    /* box-sizing: content-box; */
     width: 122px;
     height: 28px;
     cursor: pointer;
 }
+
+/* .nav{
+
+} */
 .navLoc {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     display: flex;
     overflow: hidden;
     -webkit-box-align: center;
@@ -89,12 +92,19 @@ header {
     color: rgb(15, 25, 56);
     font-size: 14px;
     margin-left: 4px;
+    margin-bottom: 0px;
     text-overflow: ellipsis;
     white-space: nowrap;
     font-weight: 600;
     line-height: 24px;
     overflow: hidden;
     letter-spacing: normal;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.city::placeholder{
+    text-align: center;
 }
 
 .downA {
@@ -107,9 +117,8 @@ header {
 }
 
 .dunzoG {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     display: flex;
-    display: none;
 }
 
 .dunzoP {
@@ -138,15 +147,25 @@ header {
     overflow: visible;
 }
 
+.dunzoBtn:hover,
+.dunzoBusi:hover {
+    color: rgb(37, 211, 102);
+    fill: rgb(37, 211, 102);
+}
+
 .dunzoArrow {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     display: flex;
     position: relative;
 }
 
 .darkA {
     margin-left: 6px;
-    fill: rgb(23, 30, 48);
+    color: rgb(23, 30, 48);
+}
+
+.darkA:hover {
+    fill: rgb(37, 211, 102);
 }
 
 .dropdown-menu {
@@ -199,31 +218,35 @@ header {
 }
 
 .need {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     font-weight: 600;
     color: rgb(15, 25, 56);
     font-size: 16px;
     line-height: 24px;
 }
 
+.need:hover {
+    color: rgb(37, 211, 102);
+}
+
 .signup {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     margin-top: 4px;
     font-weight: 500;
     color: rgb(15, 25, 56);
-    font-size: 14px;
+    font-size: 13px;
     line-height: 20px;
 }
 
 .line {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     margin: 0px 16px;
     background-color: rgb(225, 227, 234);
     height: 1px;
 }
 
 .rightFlex {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     -webkit-box-align: center;
     align-items: center;
     display: flex;
@@ -233,10 +256,12 @@ header {
     text-decoration: none;
     cursor: pointer;
     color: inherit;
+    position: relative;
+    width: 65px;
 }
 
 .foo {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     margin-left: 32px;
     display: flex;
     flex-direction: column;
@@ -257,16 +282,32 @@ header {
 
 .svgC {
     stroke: none;
+    /* position:relative;
+    top: -10px; */
 }
 
-.search1 {
+.search {
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: 16px;
     text-align: center;
     margin-top: 4px;
-    color: black;
+    color: inherit;
+    margin-bottom: 0px;
+}
+/* .cartPos{
+    position: relative;
+    top: -10px;
+} */
+
+.foo:hover {
+    color: rgb(37, 211, 102);
+    fill: rgb(37, 211, 102);
+}
+
+.svg:hover {
+    stroke: rgb(37, 211, 102);
 }
 
 .gbtn {
@@ -281,6 +322,272 @@ header {
     padding: 8px 20px;
     border-radius: 30px;
     font-weight: bold;
+    margin-bottom: 0px;
+    border: none;
+}
+ /* The Modal (background) */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  
+  
+  
+  
+  
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 540px;
+  }
+  
+  .model-content1{
+      background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 420px;
+  }
+  /* The Close Button */
+  #close {
+    color: #aaaaaa;
+    /* float: right; */
+    font-size: 40px;
+    /* font-weight: bold; */
+    margin-top: -10px;
+    margin-right: 0px;
+  }
+  
+  .modImg{
+      width: 60px;
+      height:60px;
+  }
+  #close1 {
+      color: #aaaaaa;
+    /* float: right; */
+    font-size: 40px;
+    /* font-weight: bold; */
+    margin-top: -10px;
+    margin-right: 0px;
+  }
+  #close:hover,
+  #close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #close1:hover,
+  #close1:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .addText{
+      /* border: 1px solid; */
+      display: flex;
+      column-gap: 52%;
+  }
+  .addText1{
+      /* border: 1px solid; */
+      display: flex;
+      column-gap: 80%;
+  }
+  .modalText{
+      font-size:25px;
+  }
+  .modalFlex{
+      width: 95%;
+      height:50px;
+      border-radius: 10px;
+      border: 1px solid;
+      margin: auto;
+      display: flex;
+  }
+  #myInput{
+      border:none;
+      /* margin-top: 11px; */
+      width: 450px;
+      height:50px;
+      outline: none;
+  }
+  .find{
+      margin: 11px 10px 0 10px;
+  }
+  .head3{
+      color: black;
+  }
+  .model-content1 p{
+      color: gray;
+  }
+  .model-content1 p span{
+      color: red;
+  }
+  .mob{
+      font-size:12px;
+      margin-top: 10px;
+  }
+  .phone{
+      width: 100%;
+      height:50px;
+      border: 1px solid;
+      border-radius:10px;
+      display:flex;
+  }
+  .phone1{
+      width: 100%;
+      height:50px;
+      border: 1px solid;
+      border-radius:10px;
+      display:flex;
+      margin-top: 6px;
+  }
+  .icon{
+      fill:rgb(141, 146, 165);
+  }
+  #myInput1, #myInput2{
+      border:none;
+      /* margin-top: 11px; */
+      width: 360px;
+      height:50px;
+      outline: none;
+  }
+  #myInput2{margin-left: 20px;}
+  .flexCheck{
+      /* box-sizing: border-box; */
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 30px;
+  }
+  .checkbox{
+      display: inline-flex;
+      -webkit-box-align: center;
+      align-items: center;
+      user-select: none;
+      cursor: pointer;
+  }
+  .terms{
+      width: 100px;
+      border-left: 1px solid gray;
+      padding-left: 10px;
+      
+  }
+  #myCheck{
+      height:20px;
+      width: 30px;
+  }
+  .conditions{
+      font-size: 15px;
+  }
+  .terms a{
+      text-decoration: none;
+      color:rgb(37, 211, 102);
+  }
+  .otpbtn{
+      width: 100%;
+      height:50px;
+      margin-top: 30px;
+      border-radius: 50px;
+      background-color: rgb(37, 211, 102);
+      border:none;
+      color:white;
+      font-size: bold;
+  }
+  #this{
+      display:none;
+  }
+  #key1{
+      display: none;
+  }
+  #mySubmit{
+      width: 100%;
+      height:50px;
+      margin-top: 30px;
+      border-radius: 50px;
+      background-color: rgb(37, 211, 102);
+      border:none;
+      color:white;
+      font-size: bold;
+  }
+  
+  
+  
+  /* --------------------cart count badge---------------------- */
+  #lblCartCount {
+    font-size: 12px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+    display:none;
+}
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  z-index:1;
+  position:absolute;
+  right: -4px;
+  top: -8px;
+}
+
+.dropbtn{
+    background:none;
+    border:none;
+    outline:none;
+}
+
+.dropdown {
+  position: relative;
+  width: 200px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 125px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.log:hover {
+    width: 100%;
+    background-color: rgb(36, 187, 81);
+    color:white;
+    text-align: center;
 }
 
 /* .new_div {
@@ -671,9 +978,11 @@ input {
 .sub-bottom-div {
     box-sizing: border-box;
     display: flex;
+    height: 400px;
 }
 .left-items {
-    height: calc(100vh - 255px);
+    /* height: calc(100vh - 255px); */
+    /* height:500px; */
     box-sizing: border-box;
     display: flex;
     width: 140px;
@@ -682,7 +991,7 @@ input {
     padding: 36px 0px 12px;
     overflow: auto;
     /* height: calc(100vh - 378px); */
-    position: sticky;
+    /* position: sticky; */
     top: 255px;
     overflow: scroll;
 }
@@ -769,6 +1078,8 @@ input {
 }
 .head-mid-div {
     box-sizing: border-box;
+    height:400px;
+    overflow: scroll;
 }
 .head-mid-div > p{
     /* font-weight: 600; */
@@ -941,4 +1252,44 @@ input {
     font-size: 24px;
     margin-right: 4px;
     font-weight: 500;
+}
+.storeItems{
+    width: 32%;
+    height: 400px;
+    padding: 15px;
+    overflow:scroll;
+    /* border: 1px solid; */
+}
+.cart-style{
+    font-size:25px;
+    margin-bottom: 20px;;
+}
+#btnSave{
+    outline:visible !important;
+    border:1px solid green;
+    border-radius:5px;
+    margin-top:10px;
+}
+.apply{
+    width:60px;
+    height:36px;
+    background-color:rgb(0, 210, 144);
+    border: none;
+    color: white;
+    border-radius:5px;
+    margin-top:10px;
+}
+.checkout{
+    width: 100%;
+    height: 40px;
+    margin-top:50px;
+    background-color:rgb(0, 210, 144);
+    border: none;
+    color: white;
+    border-radius:5px;
+}
+#display, #display1{
+    color: red;
+    display:none;
+    font-weight: 600;
 }

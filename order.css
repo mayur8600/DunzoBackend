@@ -82,7 +82,6 @@ header {
     height: 20px;
     width: 16px;
     flex-shrink: 0;
-    /* overflow: hidden; */
 }
 
 .city {
@@ -103,7 +102,6 @@ header {
     fill: rgb(0, 179, 122);
     flex-shrink: 0;
     margin-left: 4px;
-    /* overflow: hidden; */
 }
 
 .dunzoG {
@@ -579,6 +577,7 @@ a {
     display: flex;
     width: 100%;
     padding: 12px;
+    border-radius:10px;
 }
 
 .sub1:hover {

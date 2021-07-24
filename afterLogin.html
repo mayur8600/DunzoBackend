@@ -271,8 +271,6 @@
             color: inherit;
             position: relative;
             width: 65px;
-            background:none;
-            border: none;
         }
 
         .foo {
@@ -372,23 +370,18 @@
 
         .barContainer {
             width: 100%;
-            /* height: 160px; */
+            height: 160px;
             border-bottom: 1px solid white;
-            padding-bottom: 40px;
         }
 
         .fooCont {
             width: 100%;
-            /* height: 160px; */
+            height: 160px;
             /* border-bottom: 1px solid white; */
             padding-top: 65px;
             display: flex;
         }
-        /* @media (min-width: 500px) and (max-width: 699px) {
-            .fooCont {
-            flex-direction: column;
-        } 
-        } */
+
         .fooimg1 {
             width: 70px;
             height: 70px;
@@ -548,7 +541,6 @@
             flex-direction: column;
             display: flex;
             width: 100%;
-            flex-wrap: nowrap;
         }
 
         .textE {
@@ -561,7 +553,7 @@
 
         .ctext1 {
             /* box-sizing: border-box; */
-            width: 100em;
+            width: 100%;
             background-color: rgb(247, 253, 250);
             padding-bottom: 24px;
         }
@@ -1005,7 +997,6 @@
     padding: 0 5px;
     vertical-align: top;
     margin-left: -10px;
-    display: none;
 }
 .badge {
   padding-left: 9px;
@@ -1017,8 +1008,46 @@
   position:absolute;
   right: -4px;
   top: -8px;
-  
+  display:none;
 }
+
+.dropbtn{
+    background:none;
+    border:none;
+    outline:none;
+}
+
+.dropdown {
+  position: relative;
+  width: 200px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 125px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.log:hover {
+    width: 100%;
+    background-color: rgb(36, 187, 81);
+    color:white;
+    text-align: center;
+}
+
     </style>
 </head>
 
@@ -1091,7 +1120,7 @@
                                 <p class="search">Search</p>
                             </div>
                         </a>
-                        <button id="signbtn1" class="tag">
+                        <a href="https://www.dunzo.com/checkout" class="tag">
                             <div class="foo">
                                 <span class='badge' id='lblCartCount'> 5 </span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 22" height="24px" width="28px"
@@ -1105,10 +1134,15 @@
                                 </svg>
                                 <p class="search cartPos">Cart</p>
                             </div>
+                        </a>
+                        <button onclick="user()" class="tag dropbtn">
+                            <div class="foo drop">
+                                <svg viewBox="0 0 24 24" fill="inherit" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" class="sc-64ptou-0 ktZbjU"><g clip-path="url(#clip0)"><path d="M21.95 19.138a.781.781 0 00-1.53.318.816.816 0 01-.165.684.793.793 0 01-.625.297H4.37a.794.794 0 01-.625-.297.816.816 0 01-.165-.684c.81-3.894 4.246-6.739 8.212-6.835a5.272 5.272 0 00.415 0 8.595 8.595 0 016.941 3.815.781.781 0 101.298-.87 10.162 10.162 0 00-5.266-4.001 5.308 5.308 0 002.132-4.252A5.319 5.319 0 0012.001 2a5.319 5.319 0 00-5.313 5.313c0 1.738.84 3.284 2.134 4.254-1.186.39-2.3.998-3.273 1.8a10.192 10.192 0 00-3.498 5.77A2.372 2.372 0 004.371 22H19.63a2.372 2.372 0 002.32-2.862zM8.25 7.312A3.754 3.754 0 0112 3.563a3.754 3.754 0 013.75 3.75 3.755 3.755 0 01-3.56 3.746 10.909 10.909 0 00-.379 0 3.755 3.755 0 01-3.56-3.745z"></path></g><defs><clipPath id="clip0"><path fill="#fff" transform="translate(2 2)" d="M0 0h20v20H0z"></path></clipPath></defs></svg>
+                                <p class="search">Profile</p>
+                            </div>
                         </button>
-                        <div class="gbtn">
-                            <button class="sign" id="signbtn">Sign in</button>
-                        </div>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="index.html" class="log">LogOut</a>
                     </div>
                 </div>
             </div>
@@ -1388,23 +1422,12 @@
         }
 
     }
-    // var ignoreClickOnMeElement = document.getElementById('press');
-
-// document.addEventListener('click', function(event) {
-//     var isClickInsideElement = ignoreClickOnMeElement.contains(event.target);
-//     if (!isClickInsideElement) {
-//         //Do something click is outside specified element
-//         ignoreClickOnMeElement.style.display ="none"
-//     }
-// });
 
 
-// Get the modal
 // <!-- The Modal -->
 var modal = document.getElementById('myModal')
 var newModal = document.getElementById('myModal1')
 var btn = document.getElementById("signbtn");
-var btn1 = document.getElementById("signbtn1");
 var btnloc = document.getElementById("locate");
 var span = document.getElementById("close");
 var span1 = document.getElementById("close1");
@@ -1412,17 +1435,6 @@ btnloc.onclick = function() {
     document.body.style.overflow="hidden";
     modal.style.display = "block";
 }
-
-btn.onclick = function() {
-    document.body.style.overflow="hidden";
-    newModal.style.display = "block";
-}
-
-btn1.onclick = function() {
-    document.body.style.overflow="hidden";
-    newModal.style.display = "block";
-}
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     document.body.style.overflow="visible";
     // modal1.style.display = "none";
@@ -1431,10 +1443,8 @@ span.onclick = function() {
 
 span1.onclick = function() {
     document.body.style.overflow="visible";
-    // modal1.style.display = "none";
   newModal.style.display = "none";
 }
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal || event.target == newModal) {
     document.body.style.overflow="visible"
@@ -1474,22 +1484,10 @@ function otpNew(){
         otp3.style.display="none"
         btn1.style.display="inherit"
         btn2.style.display="none"
-        alert('Yay! Login Successfull')
-        window.location.href="afterLogin.html"
+        alert('login successfull')
         newModal.style.display = "none";
         }
-        else{
-            alert('OTP Provided by You is Invalid')
-        }
 }
-// function submit() {
-//     var input = document.getElementById('myInput').value;
-//     var change = document.getElementById('city');
-//     change.innerHTML= input;
-//     modal.style.display = "none";
-//     console.log(change)
-// }
-
 function submit() {
     var input = document.getElementById('myInput').value;
     var change = document.getElementById('city');
@@ -1503,6 +1501,15 @@ function submit() {
         alert('Dunzo services are not available at this location yet. Please update your location.')
     }
 }
-
-
+var count1 = 0;
+function user() {
+    count1++;
+  var k = document.getElementById("myDropdown")
+  if (count1 % 2 == 1) {
+            k.style.display = 'inherit';
+        }
+        else {
+            k.style.display = 'none';
+        }
+}   
 </script>
