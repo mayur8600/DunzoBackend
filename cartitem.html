@@ -527,6 +527,12 @@
         },
     ]
 
+    var bool = [
+        {
+            value:true,
+        }
+    ]
+
     if (localStorage.getItem('students') == null) {
         localStorage.setItem('students', JSON.stringify(students))
 
@@ -672,11 +678,16 @@ function cartItem() {
    n.innerHTML = `<h2><b>Total Price : ₹ ${m}</b><h2>`;
 }
 cartItem()
+var coupen = false;
 function apply() {
     var n = document.getElementById('priceD');
     var coupen = document.getElementById('btnSave').value
     if(coupen == "masai30"){
         n.innerHTML = `<h2><b>Total Price :₹ ${m-((m*30)/100)}</b></h2>`;
+        if (localStorage.getItem('coupen') == null) {
+        localStorage.setItem('coupen', JSON.stringify(bool))
+
+    }
     }
 }
 
