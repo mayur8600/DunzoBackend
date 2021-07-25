@@ -1293,3 +1293,7 @@ input {
     display:none;
     font-weight: 600;
 }
+.para1 > a{
+    text-decoration: none;
+    color: rgb(23, 30, 48);
+}
