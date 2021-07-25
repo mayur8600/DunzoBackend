@@ -670,12 +670,12 @@ function cartItem() {
    var element = document.createElement('div')
    html="";
    for(i=0; i < arr.length; i++){
-    html += `<div id=${i+1}><span>${i+1})</span>${arr[i]}</div><button onclick=Remove(${i+1})>Remove</button>`
+    html += `<div id=${i+1}><span>➤ </span>${arr[i]}</div><button onclick=Remove(${i+1})>Remove</button>`
     brand.innerHTML = `Items :${html}`;
 }
 
    var n = document.getElementById('priceD');
-   n.innerHTML = `<h2><b>Total Price : ₹ ${m}</b><h2>`;
+   n.innerHTML = `<h3><b>Total Price : ₹ ${m}</b><h3>`;
 }
 cartItem()
 var coupen = false;
@@ -683,7 +683,7 @@ function apply() {
     var n = document.getElementById('priceD');
     var coupen = document.getElementById('btnSave').value
     if(coupen == "masai30"){
-        n.innerHTML = `<h2><b>Total Price :₹ ${m-((m*30)/100)}</b></h2>`;
+        n.innerHTML = `<h3><b>Total Price :₹ ${m-((m*30)/100)}</b></h3>`;
         if (localStorage.getItem('coupen') == null) {
         localStorage.setItem('coupen', JSON.stringify(bool))
 
@@ -806,6 +806,10 @@ function Remove(val){
 
     localStorage.setItem('cart', JSON.stringify(arr1));
         window.location.reload();
+}
+
+function checkOut(){
+    window.location.href="checkout.html"
 }
 </script>
 

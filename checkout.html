@@ -129,14 +129,14 @@
                 <div class="conSel">
                 <div class="oncon">Country</div>
                  <div>
-                    <select id="country"  style="opacity: 0.5;">
+                    <select class="country"  style="opacity: 0.5;">
                         <option>India</option>
                     </select></div>
                     </div>
                     <div class="conSel">
                         <div class="oncon">State/ Union Territiry</div>
                         <div>
-                            <select  name="" id="country" style="opacity: 0.5;">
+                            <select  name="" class="country" style="opacity: 0.5;">
                             <option>Please select...</option>
                             <option>Delhi</option>
                             <option>Haryana</option>
@@ -213,7 +213,7 @@
                         
                     </div>
                     <div>
-                        <input type="checkbox" id="check" required>    Remember this Card </input>
+                        <input type="checkbox" id="check" >    Remember this Card </input>
                     </div>
                     <div class="tool">
                         <img src="https://www.vippng.com/png/detail/35-355987_facebook-lock-icon-png-download-secure-svg.png" alt="lock" class="secure">
@@ -249,7 +249,7 @@
                 <span style="opacity: 1;">Invoice</span>
                 <div  class="total_price">
                     <span>Item total</span>
-                    <span id="total"></span>
+                    <span id="display1"></span>
                 </div>
 
                 <hr style="margin-top: 1%;">
@@ -268,8 +268,8 @@
                 
             </div>
            
-            <button onclick="shoppingComplete()">Complete Payment</button>
-            <!-- <h1 id="notification"></h1> -->
+            <button onclick="shoppingComplete(event)">Complete Payment</button>
+            <h1 id="notification"></h1>
         </div>
     </div>
   </body>
@@ -288,50 +288,204 @@ function submitAddress() {
           }
 }
 
-function shoppingComplete(){
+// function shoppingComplete(){
 
            
 
-        //  var name = document.getElementById("name").value;
-        //  var accnum = document.getElementById("cNum").value;
-        //  var month = document.getElementById("month").value;
-        //  var year = document.getElementById("year").value;
-        //  var cvv = document.getElementById("cvv").value;
-        //  var checkbox = document.getElementById("check").value;
+//         //  var name = document.getElementById("name").value;
+//         //  var accnum = document.getElementById("cNum").value;
+//         //  var month = document.getElementById("month").value;
+//         //  var year = document.getElementById("year").value;
+//         //  var cvv = document.getElementById("cvv").value;
+//         //  var checkbox = document.getElementById("check").value;
 
-        //  if(name!="" && accnum!="" && accnum)
+//         //  if(name!="" && accnum!="" && accnum)
 
-        // console.log(accnum.length);
-        let card = document.getElementById("creditCard");
+//         // console.log(accnum.length);
+//         let card = document.getElementById("creditCard");
 
 
-let c_accnum = card.cNum.value;
+// let c_accnum = card.cNum.value;
 
-let number = {
-   c_accnum
-};
+// let number = {
+//    c_accnum
+// };
 
-let arr;
+// let arr;
 
-arr = localStorage.getItem("credit");
+// arr = localStorage.getItem("credit");
 
-if(arr == null){
-    arr = [];
+// if(arr == null){
+//     arr = [];
+// }
+// else{
+//     arr = JSON.parse(localStorage.getItem("credit"));
+// }
+
+// arr.push(number);
+
+//  data = localStorage.setItem('credit', JSON.stringify(arr));
+
+// console.log(data);
+// }
+     
+
+
+
+// --------------------------//-----------------/
+
+// function submitAddress(){
+//               var div = document.getElementById("creditCard");
+//               var el = document.createElement('div');
+//               el.setAttribute('id', 'inputBox');
+
+//               div.append(el);
+
+
+//           }
+
+
+//           function shoppingComplete(e) {
+//               e.preventDefault();
+//   let array = [
+//     "Payment Successfull",
+//     "Course Linked with Your Profile",
+//     "Happy Learning!",
+//   ];
+
+//   let h1 = document.getElementById("notification");
+//   let index = 0;
+//   h1.textContent = array[index++];
+
+//   setTimeout(function () {
+//     h1.textContent = array[index++];
+//   }, 3000);
+//   setTimeout(function () {
+//     h1.textContent = array[index++];
+//   }, 8000);
+// }
+
+let abc = JSON.parse(localStorage.getItem("cart"));
+
+
+// let x = document.getElementById("display");
+var data_div = document.getElementById('data1')
+var m = 0;
+var arr = [];
+for (let i = 0; i < abc?.length; i++) {
+
+    let y = document.createElement("div");
+
+    let img = document.createElement("img");
+    img.src = abc[i].img;
+
+    let price = document.createElement("p");
+    price.innerHTML = `Price : ${abc[i].price}`;
+
+
+    let des = document.createElement("p");
+    des.innerHTML = `Qty : ${abc[i].qty}`;
+
+    let brand = document.createElement("p");
+    brand.innerHTML = `Brand :${abc[i].name} `;
+
+    // y.append(img, price, des, brand);
+    // data_div.append(y);
+    
+
+    m += Number(abc[i].price);
+    arr.push(abc[i].name)
 }
-else{
-    arr = JSON.parse(localStorage.getItem("credit"));
+
+
+
+
+function cartItem() {
+    
+    let data = JSON.parse(localStorage.getItem("cart"));
+    let valid = localStorage.getItem("coupen");
+    // var l = document.getElementById('display');
+    var n = document.getElementById('display1');
+    var g = document.getElementById('final');
+//    var k = document.getElementById('counter');
+//    let g = document.getElementById('lblCartCount');
+//    k.innerHTML = `Total Cart Items:${data?.length}`
+//    if(data?.length > 3){
+//     l.style.display ='inherit'
+//     n.style.display ='inherit'
+//    }
+
+//    if(data?.length > 0){
+//        g.append(data.length);
+//        g.style.display = 'inherit';
+//    }
+
+   let brand = document.getElementById('discounted_price');
+   var element = document.createElement('div')
+   html="";
+   for(i=0; i < arr.length; i++){
+    html += `<div id=${i+1}><span>➤ </span>${arr[i]}</div><button onclick=Remove(${i+1})>Remove</button>`
+    brand.innerHTML = `Items :${html}`;
 }
 
-arr.push(number);
+if(valid?.length > 0){
+    n.innerHTML = `<h2><b>Total Price :₹ ${m-((m*30)/100)}</b></h2>`;
+    g.innerHTML = `<h2><b>Total Price :₹ ${m-((m*30)/100)}</b></h2>`;
+    localStorage.removeItem('coupen')
 
- data = localStorage.setItem('credit', JSON.stringify(arr));
-
-console.log(data);
+}else{
+   n.innerHTML = `<h2><b>Total Price : ₹ ${m}</b><h2>`;
+    g.innerHTML = `<h2><b>Total Price : ₹ ${m}</b><h2>`;
 }
-      
+}
+cartItem()
+function apply() {
+    var n = document.getElementById('priceD');
+    var coupen = document.getElementById('btnSave').value
+    if(coupen == "masai30"){
+        n.innerHTML = `<h2><b>Total Price :₹ ${m-((m*30)/100)}</b></h2>`;
+        
+    }
+
+}
 
 
 
 
+function Remove(val){
+    let data = JSON.parse(localStorage.getItem("cart"));
+    var p = document.getElementById(val)
+    arr1=[];
+    for(i = 0; i < data.length; i++){
+        if(i+1 != val){
+            arr1.push(data[i])
+        }
+    }
+    data = arr1;
+
+    localStorage.setItem('cart', JSON.stringify(arr1));
+        window.location.reload();
+}
+
+function shoppingComplete(e){
+    e.preventDefault();
+
+    var res = document.getElementById("inputBox")
+          var a = document.getElementById("address").value
+          var c = document.getElementById("city").value
+          var p = document.getElementById("pin").value
+          var n = document.getElementById("name").value
+          var cn = document.getElementById("cNum").value
+          var mm = document.getElementById("month").value
+          var yy = document.getElementById("year").value
+          var sc = document.getElementById("cvv").value
+
+          if(a != "" && c!="" && p!="" && n!="" && cn!="" && mm!="" && yy!="" && sc!=""){
+              window.location.href='gAndE.html'
+          }
+          else{
+              alert("Please Fill Require Details")
+          }
+}
 </script>
 </html>

@@ -13,8 +13,9 @@ there is log in and sign up functionality both done on same sign in button. on c
 so we also used that method  by providing mobile number user get otp then by applying that otp user can log in. 
 
 There are many Child pages linked to the Index page and after login page, but for this clone following pages are made.
-Dunzo Business 
-Product feature page
+
+#Dunzo Business 
+#Product feature page
 
 PRODUCT PAGES & KEY FEATURES :
 There are some Key Features which are added in website clone such as,
