@@ -51,8 +51,6 @@
 <img src="Images/checkout.png" width="100%">
 <img src="Images/End.png" width="100%
 
-#
-
 ## PRODUCT PAGES & KEY FEATURES :
 ##### There are some Key Features which are added in website clone such as,
 
