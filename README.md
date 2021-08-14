@@ -54,8 +54,8 @@
 
 ### CHECKOUT PAGE AND END PAGES
 
-<img src="Images/checkout.png" width="100%">
-<img src="Images/End.png" width="100%
+<img src="Images/checkout.png" width="70%">
+<img src="Images/End.png" width="70%
 
 #
 
