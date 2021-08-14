@@ -38,6 +38,13 @@
 
 ##### There are many Child pages linked to the Index page and after login page, but for this clone following pages are made.
 
+## CART ITEMS
+##### In this page we can add iten in the cart for the purchace and proceed to checkout page
+
+<img src="Images/cartItem.png" width="100%">
+
+#
+
 ## DUNZO PARTNER
 <img src="Images/DunzoPartner.png" width="100%">
 
@@ -54,7 +61,7 @@
 #
 
 ## PRODUCT PAGES & KEY FEATURES :
-##### There are some Key Features which are added in website clone such as,
+##### There are some Key Features which are added in website clone such as :
 
 ##### Cart Content, Add and remove item from Cart.
 ##### Coupon Application feature.
@@ -65,9 +72,8 @@
 
 ## Team Members and Contributors
 
-#
 
-
+## -------------------------------------
 ### Mayur Kamthe
 - *Github* : https://github.com/mayur8600/
 - *Email* : mayur.kamthe62987@gmail.com
