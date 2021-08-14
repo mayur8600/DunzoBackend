@@ -50,12 +50,11 @@
 ## Product feature page
 <img src="Images/extraInfo.png" width="100%">
 
-### CHECKOUT PAGE AND END PAGES
+### CHECKOUT PAGE
 
 <img src="Images/checkout.png" width="100%">
 
 #
-
 
 ## PRODUCT PAGES & KEY FEATURES :
 ### There are some Key Features which are added in website clone such as :
