@@ -52,7 +52,13 @@
 ## Product feature page
 <img src="Images/extraInfo.png" width="100%">
 
+### CHECKOUT PAGE AND END PAGES
+
+<img src="Images/checkout.png" width="100%">
+<img src="Images/End.png" width="100%
+
 #
+
 
 ## PRODUCT PAGES & KEY FEATURES :
 ##### There are some Key Features which are added in website clone such as :
@@ -66,8 +72,6 @@
 
 ## Team Members and Contributors
 
-
-## -------------------------------------
 ### Mayur Kamthe
 - *Github* : https://github.com/mayur8600/
 - *Email* : mayur.kamthe62987@gmail.com
