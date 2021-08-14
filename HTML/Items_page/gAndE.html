@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order from Grocery Stores online in Mumbai | Dunzo</title>
     <link rel = "icon" href = "https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-footer-a7423f59ce95bf41719960ee8314ff2d.png" type = "image/x-icon">
+
+    <title>Order from Grocery Stores online in Mumbai | Dunzo</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="orderkey.css">
+<link rel="stylesheet" href="../../styles/order.css">
 </head>
 <body>
     <header>
@@ -17,7 +19,7 @@
             <div class="row">
                 <div class="col">
                     <div class="col1">
-                        <a href="/index.html" class="link">
+                        <a href="../afterLogin_Page/afterLogin.html" class="link">
                             <img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-4d2d81aefcf296bc100d9edc114c2ea5.png"
                                 alt="logo" class="logo"></a>
                         <div class="nav" id="locate">
@@ -29,7 +31,6 @@
                                         fill="#00B37A"></path>
                                 </svg>
                                 <p class="city" id="city">Mumbai, Maharashtra, India</p>
-                                <!-- <input type="text"class="city" id="city" placeholder="Mumbai, Maharashtra, India"> -->
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="8px"
                                     width="36px" class="downA">
                                     <path d="M12.594 4L8 8.962 3.406 4 2 5.519 8 12l6-6.481L12.594 4z"></path>
@@ -80,7 +81,7 @@
                                 <p class="search">Search</p>
                             </div>
                         </a>
-                        <a href="https://www.dunzo.com/checkout" class="tag">
+                        <button id="signbtn1" class="tag">
                             <div class="foo">
                                 <span class='badge' id='lblCartCount'> 5 </span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 22" height="24px" width="28px"
@@ -94,20 +95,16 @@
                                 </svg>
                                 <p class="search cartPos">Cart</p>
                             </div>
-                        </a>
-                        <button onclick="user()" class="tag dropbtn">
-                            <div class="foo drop">
-                                <svg viewBox="0 0 24 24" fill="inherit" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" class="sc-64ptou-0 ktZbjU"><g clip-path="url(#clip0)"><path d="M21.95 19.138a.781.781 0 00-1.53.318.816.816 0 01-.165.684.793.793 0 01-.625.297H4.37a.794.794 0 01-.625-.297.816.816 0 01-.165-.684c.81-3.894 4.246-6.739 8.212-6.835a5.272 5.272 0 00.415 0 8.595 8.595 0 016.941 3.815.781.781 0 101.298-.87 10.162 10.162 0 00-5.266-4.001 5.308 5.308 0 002.132-4.252A5.319 5.319 0 0012.001 2a5.319 5.319 0 00-5.313 5.313c0 1.738.84 3.284 2.134 4.254-1.186.39-2.3.998-3.273 1.8a10.192 10.192 0 00-3.498 5.77A2.372 2.372 0 004.371 22H19.63a2.372 2.372 0 002.32-2.862zM8.25 7.312A3.754 3.754 0 0112 3.563a3.754 3.754 0 013.75 3.75 3.755 3.755 0 01-3.56 3.746 10.909 10.909 0 00-.379 0 3.755 3.755 0 01-3.56-3.745z"></path></g><defs><clipPath id="clip0"><path fill="#fff" transform="translate(2 2)" d="M0 0h20v20H0z"></path></clipPath></defs></svg>
-                                <p class="search">Profile</p>
-                            </div>
                         </button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a href="index.html" class="log">LogOut</a>
+                        <div class="gbtn">
+                            <button class="sign" id="signbtn">Sign in</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
 
      <div class="midContainer">
            <div class="midDiv1">
@@ -648,69 +645,68 @@
              </a>
          </div>
      </div>
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
+     <div id="myModal" class="modal">
 
-    <!-- Modal content -->
-    <div class="modal-content">
-        <div class="addText">
-        <div class="modalText">Add your Location</div>
-      <div id="close">&times;</div>
-    </div>
-    <div class="modalFlex">
-        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg find">
-            <path d="M11 19.023a8 8 0 10.046-16 8 8 0 00-.046 16zM20.994 21.052l-4.337-4.363"
-                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg></div>
-        <div>
-            <input type="text" placeholder="Search for an area, location name" id="myInput">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="addText">
+            <div class="modalText">Add your Location</div>
+          <div id="close">&times;</div>
         </div>
-        
-    </div>
-    <button onclick="submit()" id="mySubmit">Submit</button>
-    </div>
-  
-  </div>
-      <!-- The Modal -->
-<div id="myModal1" class="modal">
-
-    <!-- Modal content -->
-    <div class="model-content1">
-        <div class="addText1">
-            <div class="modalText"><img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/signin-icon-cb6e6a706f01b84896e60235a2392ac9.png" alt="door" class="modImg"></div>
-      <div id="close1">&times;</div>
+        <div class="modalFlex">
+            <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg find">
+                <path d="M11 19.023a8 8 0 10.046-16 8 8 0 00-.046 16zM20.994 21.052l-4.337-4.363"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg></div>
+            <div>
+                <input type="text" placeholder="Search for an area, location name" id="myInput">
+            </div>
+            
+        </div>
+        <button onclick="submit()" id="mySubmit">Submit</button>
+        </div>
       
-    </div>
-    <div>
-        <h3 class="head3">Sign in or Sign up</h3>
       </div>
-      <p class="head3">Get started phone number</p>
-      <p class="mob"><span>*</span>Enter your phone number</p>
-      <div class='phone'>
-          <div>
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg find icon"><path d="M18.012 14.534c.21 0 .386.07.527.211.14.14.211.317.211.528v2.601c0 .586-.246.879-.738.879-3.492 0-6.492-1.254-9-3.762s-3.762-5.508-3.762-9c0-.492.293-.738.879-.738H8.73c.211 0 .387.07.528.21.14.141.21.317.21.528 0 .914.141 1.793.423 2.637.093.305.035.562-.176.773l-1.442 1.266c1.079 2.25 2.801 3.95 5.168 5.098l1.16-1.477a.716.716 0 01.528-.21c.117 0 .2.01.246.034a8.282 8.282 0 002.637.422z"></path></svg>
-          </div>
-          <div>
-              <input type="number" placeholder="+91 Mobile number" id="myInput1">
-          </div>
+          <!-- The Modal -->
+    <div id="myModal1" class="modal">
+    
+        <!-- Modal content -->
+        <div class="model-content1">
+            <div class="addText1">
+                <div class="modalText"><img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/signin-icon-cb6e6a706f01b84896e60235a2392ac9.png" alt="door" class="modImg"></div>
+          <div id="close1">&times;</div>
           
+        </div>
+        <div>
+            <h3 class="head3">Sign in or Sign up</h3>
+          </div>
+          <p class="head3">Get started phone number</p>
+          <p class="mob"><span>*</span>Enter your phone number</p>
+          <div class='phone'>
+              <div>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg find icon"><path d="M18.012 14.534c.21 0 .386.07.527.211.14.14.211.317.211.528v2.601c0 .586-.246.879-.738.879-3.492 0-6.492-1.254-9-3.762s-3.762-5.508-3.762-9c0-.492.293-.738.879-.738H8.73c.211 0 .387.07.528.21.14.141.21.317.21.528 0 .914.141 1.793.423 2.637.093.305.035.562-.176.773l-1.442 1.266c1.079 2.25 2.801 3.95 5.168 5.098l1.16-1.477a.716.716 0 01.528-.21c.117 0 .2.01.246.034a8.282 8.282 0 002.637.422z"></path></svg>
+              </div>
+              <div>
+                  <input type="number" placeholder="+91 Mobile number" id="myInput1">
+              </div>
+              
+          </div>
+          <div class="phone1" id="this">
+            <input type="number" placeholder="Enter OTP here" id="myInput2">
+        </div>
+          <div class="flexCheck">
+              <div class="checkbox">
+                  <input type="checkbox" id="myCheck">
+              </div>
+              <div class="conditions">I accept the Terms and Conditions</div>
+              <div class="terms">
+                  <a href="https://www.dunzo.com/terms">View T&C ❯</a>
+              </div>
+          </div>
+          <button onclick="otp()" class="otpbtn" id="key">Send OTP</button>
+          <button onclick="otpNew()" class="otpbtn" id="key1">Confirm</button>
       </div>
-      <div class="phone1" id="this">
-        <input type="number" placeholder="Enter OTP here" id="myInput2">
     </div>
-      <div class="flexCheck">
-          <div class="checkbox">
-              <input type="checkbox" id="myCheck">
-          </div>
-          <div class="conditions">I accept the Terms and Conditions</div>
-          <div class="terms">
-              <a href="https://www.dunzo.com/terms">View T&C ❯</a>
-          </div>
-      </div>
-      <button onclick="otp()" class="otpbtn" id="key">Send OTP</button>
-      <button onclick="otpNew()" class="otpbtn" id="key1">Confirm</button>
-  </div>
-</div>
 
 
      <footer>
@@ -768,107 +764,4 @@
     </footer>
 </body>
 </html>
-<script>
-     var count = 0;
-    function down() {
-        count++;
-        var k = document.getElementById('press');
-        if (count % 2 == 1) {
-            k.style.display = 'inherit';
-        }
-        else {
-            k.style.display = 'none';
-        }
-
-    }
-
-
-// <!-- The Modal -->
-var modal = document.getElementById('myModal')
-var newModal = document.getElementById('myModal1')
-var btn = document.getElementById("signbtn");
-var btnloc = document.getElementById("locate");
-var span = document.getElementById("close");
-var span1 = document.getElementById("close1");
-btnloc.onclick = function() {
-    document.body.style.overflow="hidden";
-    modal.style.display = "block";
-}
-span.onclick = function() {
-    document.body.style.overflow="visible";
-    // modal1.style.display = "none";
-  modal.style.display = "none";
-}
-
-span1.onclick = function() {
-    document.body.style.overflow="visible";
-  newModal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal || event.target == newModal) {
-    document.body.style.overflow="visible"
-    modal.style.display = "none";
-    newModal.style.display = "none";
-  }
-}
-var pin1 = [];
-function otp() {
-    var otp1 = document.getElementById('myInput1').value
-    var checkBox = document.getElementById("myCheck");
-    var btn1 = document.getElementById("key")
-    var btn2 = document.getElementById("key1")
-    var otp3 = document.getElementById('this')
-    console.log(otp3)
-    if(otp1.length == 10 && checkBox.checked == true){
-        let pin = Math.floor(Math.random()*9000)+1000;
-        otp3.style.display="inherit"
-        btn1.style.display="none"
-        btn2.style.display="inherit"
-        console.log(pin)
-        alert(pin);
-        pin1.push(pin)
-        
-    }
-    else{
-        alert('Verify mobile Invalid or Check terms and conditions');
-    }
-
-}
-function otpNew(){
-    var otp2 = document.getElementById('myInput2').value
-    var btn1 = document.getElementById("key")
-    var btn2 = document.getElementById("key1")
-    var otp3 = document.getElementById('this')
-    if(pin1[pin1.length-1] == otp2){
-        otp3.style.display="none"
-        btn1.style.display="inherit"
-        btn2.style.display="none"
-        alert('login successfull')
-        newModal.style.display = "none";
-        }
-}
-function submit() {
-    var input = document.getElementById('myInput').value;
-    var change = document.getElementById('city');
-    // if(input.toLowerCase() === "pune, maharashtra, india" || "banglore, india" || "gurgaon, india" || "hayderabad, india" || "new delhi, india" || "chennai, india" || "mumbai, maharashtra, india"){
-     if(input.toLowerCase() == "pune, maharashtra, india" || input.toLowerCase() == "banglore, india" || input.toLowerCase() == "gurgaon, india" || input.toLowerCase() == "hayderabad, india" || input.toLowerCase() == "new delhi, india" || input.toLowerCase() == "chennai, india" || input.toLowerCase() == "mumbai, maharashtra, india")
-     {   change.innerHTML= input;
-        modal.style.display = "none";
-        console.log(change)
-    }
-    else{
-        alert('Dunzo services are not available at this location yet. Please update your location.')
-    }
-}
-var count1 = 0;
-function user() {
-    count1++;
-  var k = document.getElementById("myDropdown")
-  if (count1 % 2 == 1) {
-            k.style.display = 'inherit';
-        }
-        else {
-            k.style.display = 'none';
-        }
-}
-</script>
+<script src="../../scripts/gAndE.js"></script>

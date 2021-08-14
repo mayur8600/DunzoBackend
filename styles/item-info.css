@@ -1,0 +1,285 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#cart {
+    box-sizing: border-box;
+    width: 300px;
+    height: 250px;
+    border: 2px solid;
+    border-color: green;
+    background-color: rgb(255, 255, 255);
+    float: right;
+    margin-top: 15px;
+    border-radius: 6px;
+    margin-left: 15px;
+    padding-top: 16px;
+    font-weight: 500px;
+
+}
+
+header {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding-top: 72px;
+}
+
+nav {
+    box-sizing: border-box;
+    display: flex;
+    height: 72px;
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    max-width: 100vw;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    top: 0px;
+    z-index: 11;
+}
+
+.nav {
+    margin: auto;
+    box-sizing: border-box;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    display: flex;
+}
+
+.nav1,
+.nav2,
+.nav3,
+.navBusiness,
+.location {
+    display: flex;
+}
+
+.logoDundo {
+    width: 130px;
+    height: 30px;
+}
+
+.img-loc,
+.arrow-dg {
+    width: 13px;
+    margin-right: 10px;
+}
+
+.arrow-dg {
+    margin-left: 5px;
+
+}
+
+.location {
+    width: 300px;
+    flex: 1 1 0%;
+    margin-left: 40px;
+}
+
+.nav2 button {
+    height: 30px;
+    width: 146px;
+    font-size: 14px;
+}
+
+.nav2 {
+    column-gap: 20px;
+}
+
+.btn-sign {
+    width: 150px;
+    height: 32px;
+    margin-top: 10px;
+    border-radius: 50px;
+    background-color: #00D290;
+    border: none;
+    color: white;
+    font-weight: 600;
+
+
+}
+
+.navleft {
+    margin-left: 35px;
+}
+
+.img-search {
+    width: 25px;
+    margin-left: 6px;
+}
+
+.img-cart {
+    margin-top: 5px;
+    width: 25px;
+    margin-left: 2px;
+}
+
+.btn-business,
+.btn-partner {
+    background: none;
+    border: none;
+    color: rgb(23, 30, 48);
+    font-weight: 550;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2px;
+}
+
+.black-arrow {
+    width: 9px;
+    height: 11px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.text-center {
+    width: 160px;
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-center p {
+    width: 160px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(23, 30, 48);
+    font-weight: 550;
+    font-size: 13px;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: inherit;
+}
+
+.navright {
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer {
+    width: 100%;
+    height: 600px;
+    background-color: #171E30;
+}
+
+.fooContainer {
+    padding-top: 50px;
+    width: 69%;
+    height: 550px;
+    margin: auto;
+}
+
+.fooContainer h5,
+p {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    word-spacing: 0.3;
+}
+
+.fooContainer p {
+    color: gray;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.barContainer {
+    width: 100%;
+    height: 160px;
+    border-bottom: 1px solid white;
+}
+
+.fooCont {
+    width: 100%;
+    height: 160px;
+    padding-top: 65px;
+    display: flex;
+}
+
+.fooimg {
+    width: 70px;
+    height: 70px;
+}
+
+.dunzoBaba {
+    width: 270px;
+    height: 211px;
+}
+
+.bar {
+    width: 120px;
+}
+
+.bar1 {
+    width: 220px;
+}
+
+.bar2 {
+    width: 220px;
+}
+
+.bar3 {
+    width: 220px;
+}
+
+.bar4 {
+    width: 240px;
+}
+
+.barheader {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.bar1 p,
+.bar2 p,
+.bar3 p {
+    color: white;
+}
+
+.main-h1 {
+    border: 2px solid;
+    border-color: rgb(133, 241, 133);
+    width: 1200px;
+    height: 1000px;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+
+}
+
+hr{
+    border-color: rgb(155, 224, 155);
+    border-bottom: hidden;
+}
+
+#Yourcart {
+    float: right;
+    border-left: 1px solid;
+    border-color: rgb(133, 241, 133);
+    height: 100px;
+}
+
+#productdesc {
+    margin-top: 100px;
+    margin-left: 85px;
+}
+
+.para {
+    border: 2px solid;
+    width: 50%;
+    height: 25px;
+    color: white;
+}
+
+.para p {
+    color: rgb(23, 30, 48);
+}
