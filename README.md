@@ -21,7 +21,7 @@
 
 ## AFTER LOGIN PAGE :
 #####  The after login page was madhe to give user extra access to the website. in that page user can buy any product and add anything to cart.
-<img src="Images/index.png" width="100%">
+<img src="Images/AfterLogin.png" width="100%">
 
 #
 
