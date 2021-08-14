@@ -58,12 +58,12 @@
 
 
 ## PRODUCT PAGES & KEY FEATURES :
-##### There are some Key Features which are added in website clone such as :
-
+### There are some Key Features which are added in website clone such as :
 ##### Cart Content, Add and remove item from Cart.
 ##### Coupon Application feature.
 ##### Checkout Page with Payment Status.
 ##### Payment Mode Message. CART! PAYMENT!
+##### Animated End Page added.
 
 #
 
