@@ -72,7 +72,7 @@
 ### Mayur Kamthe
 - *Github* : https://github.com/mayur8600/
 - *Email* : mayur.kamthe62987@gmail.com
-- *Linkedin* : linkedin.com/in/mayur-kamthe-0b2012157/
+- *Linkedin* : https://www.linkedin.com/in/mayur-kamthe-0b2012157/
 
 ### Rupendra Singh
 - *Github* : https://github.com/Mrrupendra/ 
