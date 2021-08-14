@@ -87,7 +87,7 @@ if(pin1[pin1.length-1] == otp2){
     btn1.style.display="inherit"
     btn2.style.display="none"
     alert('Yay! Login Successfull')
-    window.location.href="../afterLogin_Page/afterLogin.html"
+    window.location.href="afterLogin.html"
     newModal.style.display = "none";
     }
     else{

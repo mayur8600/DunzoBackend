@@ -6,9 +6,6 @@
         font-family: 'Poppins', sans-serif;
   
       }
-      /* html {
-        font-family: "Roboto", sans-serif;
-      } */
       .cursorPointer:hover {
         cursor: pointer;
         outline: none;
@@ -41,20 +38,6 @@
         margin: 0rem;
     width: 105px;;
 
-      }
-      header {
-        width: 100%;
-        height: 12vh;
-        -webkit-box-shadow: 0 8px 6px -6px gray;
-        -moz-box-shadow: 0 8px 6px -6px gray;
-        box-shadow: 0 8px 6px -6px gray;
-        height: 70px;
-        -webkit-box-shadow: 0 8px 6px -6px rgb(218, 214, 214);;
-        -moz-box-shadow: 0 8px 6px -6px rgb(218, 214, 214);;
-        box-shadow: 0 8px 6px -6px rgb(218, 214, 214);
-        overflow: hidden;
-        margin-bottom: 0px;
-        /* position: relative; */
       }
       #overlay {
         position: absolute;
@@ -132,21 +115,16 @@
       .firstSection ul{
         margin-left: 40px;
       }
-      /* check above code till header w3 */
       .firstSection ul,.secondSection ul {
         list-style: none;
         display: flex;
-        /* justify-content: center; */
-        /* justify-content: center; */
         align-items: center;
       }
       .firstSection > ul li {
-        /* margin: 0 0.8vw; */
         margin: 0 12px;
       }
       
       .secondSection > ul > li {
-        /* margin: 0 0.3vw; */
         margin: 0;
         margin-left: 0.3vw;
       }
@@ -229,7 +207,6 @@
       .btn-medium {
         height: 2.7rem;
         height: 2.4rem;
-        /* border: 1px solid rgb(40, 150, 169); */
         color: white;
         font-weight: bold;
         text-align: center;
@@ -268,7 +245,6 @@
 .dropdown div:nth-child(1) {
   margin-top: 10px;
   padding-bottom: 40px;
-  /* border: 1px solid; */
 }
 
 .dropdown-content {
@@ -295,7 +271,6 @@
 }
 
 .dropdown-content b {
-  /* padding: 12px 16px; */
   text-decoration: none;
   display: block;
   text-align: center;
@@ -313,7 +288,6 @@
   margin-left: 5px;
 }
 .dropdown-content1 b {
-  /* padding: 12px 16px; */
   text-decoration: none;
   display: block;
   text-align: center;
@@ -336,7 +310,6 @@
           width: 21rem;
           margin-top: -23.5rem;
           margin-left: 1.5rem;
-          /* -webkit-box-shadow: 0 0px 6px -1px gray;  */
         }
         .searchContent > div:nth-child(1) {
           font-size: 33px;
@@ -408,9 +381,6 @@
         .image, .image-2{
           display: none;
         }
-        /* #companies{
-          padding-top: 0px;
-        } */
         #companies h1 {
         margin-bottom: 25px;;
       }
@@ -489,17 +459,16 @@
       }
       .flex-center {
           display: flex;
-          margin: 40px auto;
+          margin:60px auto;
           justify-content: center;
+          padding-top: 30px;
           column-gap: 40px;
           background-color: rgb(240,245,247);
-          /* border: 1px solid */
       }
       .flexCheck {
           width: 750px;
           height: auto;
           font-family:sf pro display,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
-          /* border: 1px solid; */
       }
       .flexCheck h2{
           margin-bottom: 20px;
@@ -565,7 +534,6 @@
           border-radius: 5px;
           border: 1px solid rgb(171, 171, 171);
           opacity: 0.8;
-          /* overflow: visible; */
       }
       #city {
           margin-left:  6%;
@@ -606,8 +574,6 @@
           border: 1px solid rgb(202, 198, 198);
           margin-top: 3%;
           border-radius: 10px;
-    
-          /* column-gap: 30px; */
           display: none;
       }
       #creditCard{
@@ -619,14 +585,12 @@
             border-radius: 5px;
           margin: 20px auto;
           margin-bottom: 10px;
-          /* border: 1px solid; */
       }
       #name, #cNum{
         width:100%;
             height:50px;
             border-radius: 5px;
             margin: auto;
-          /* margin: 20px auto; */
           margin-bottom: 10px;
           padding: 10px;
           border: 1px solid gray;
@@ -642,7 +606,6 @@
       }
       .calender{
           display: flex;
-          /* column-gap: 30px; */
       }
       #month, #year{
           width: 230px;
@@ -670,7 +633,6 @@
           width: 100%;
           height:auto;
           margin-top:50px;
-          /* border: 1px solid */
       }
       .flexSum{
           padding:20px;
@@ -682,11 +644,8 @@
           font-weight: unset;
       }
       .product-flex-boxes{
-        /* display: flex;
-        justify-content: space-between; */
         margin-top: 4%;
         padding: auto;
-
       }
       #total_in_bold span{
         font-weight: 800;
@@ -753,18 +712,7 @@
            text-decoration: none;
        }
 
-      
-        /* ----nav css start---- */
-
-        header {
-            /* box-sizing: border-box; */
-            display: flex;
-            flex-direction: column;
-            padding-top: 72px;
-        }
-
         .container {
-            /* box-sizing: border-box; */
             display: flex;
             height: 72px;
             position: fixed;
@@ -775,20 +723,17 @@
             align-items: center;
             background-color: rgb(255, 255, 255);
             top: 0px;
-            z-index: 1;
         }
 
         .row {
-            /* box-sizing: border-box; */
             width: 100%;
             margin: 0px auto;
             padding-left: 0px;
             padding-right: 0px;
-            max-width: 1024px;
+            max-width: 1250px;
         }
 
         .col {
-            /* box-sizing: border-box; */
             -webkit-box-align: center;
             align-items: center;
             -webkit-box-pack: justify;
@@ -797,7 +742,6 @@
         }
 
         .col1 {
-            /* box-sizing: border-box; */
             display: flex;
             overflow: hidden;
             flex: 1 1 0%;
@@ -813,7 +757,6 @@
         }
 
         .logo {
-            /* box-sizing: content-box; */
             width: 122px;
             height: 28px;
             cursor: pointer;
@@ -823,7 +766,6 @@
             display: none;
         }
         .navLoc {
-            /* box-sizing: border-box; */
             display: flex;
             overflow: hidden;
             -webkit-box-align: center;
@@ -837,7 +779,6 @@
             height: 20px;
             width: 16px;
             flex-shrink: 0;
-            /* overflow: hidden; */
         }
 
         .city {
@@ -865,11 +806,9 @@
             fill: rgb(0, 179, 122);
             flex-shrink: 0;
             margin-left: 4px;
-            /* overflow: hidden; */
         }
 
         .dunzoG {
-            /* box-sizing: border-box; */
             display: flex;
             display: none;
         }
@@ -907,7 +846,6 @@
         }
 
         .dunzoArrow {
-            /* box-sizing: border-box; */
             display: flex;
             position: relative;
         }
@@ -971,7 +909,6 @@
         }
 
         .need {
-            /* box-sizing: border-box; */
             font-weight: 600;
             color: rgb(15, 25, 56);
             font-size: 16px;
@@ -983,7 +920,6 @@
         }
 
         .signup {
-            /* box-sizing: border-box; */
             margin-top: 4px;
             font-weight: 500;
             color: rgb(15, 25, 56);
@@ -992,14 +928,12 @@
         }
 
         .line {
-            /* box-sizing: border-box; */
             margin: 0px 16px;
             background-color: rgb(225, 227, 234);
             height: 1px;
         }
 
         .rightFlex {
-            /* box-sizing: border-box; */
             -webkit-box-align: center;
             align-items: center;
             display: flex;
@@ -1015,7 +949,6 @@
         }
 
         .foo {
-            /* box-sizing: border-box; */
             margin-left: 32px;
             display: flex;
             flex-direction: column;
@@ -1037,8 +970,6 @@
 
         .svgC {
             stroke: none;
-            /* position:relative;
-            top: -10px; */
             display: none;
         }
 
@@ -1053,11 +984,6 @@
             margin-bottom: 0px;
             display: none;
         }
-        /* .cartPos{
-            position: relative;
-            top: -10px;
-        } */
-
         .search3 {
             margin-top: 11%;
         }
@@ -1087,15 +1013,3 @@
         .gbtn {
             margin-left: 32px;
         }
-
-        /* .sign {
-            cursor: pointer;
-            font-size: 14px;
-            color: rgb(255, 255, 255);
-            background: rgb(0, 210, 144);
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-weight: bold;
-            margin-bottom: 0px;
-            border: none;
-        } */

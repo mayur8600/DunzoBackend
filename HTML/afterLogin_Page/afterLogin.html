@@ -5,24 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="../../styles/indexStyle.css" rel="stylesheet" type="text/css">
+    <title>UserPage</title>
     <link rel = "icon" href = "https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-footer-a7423f59ce95bf41719960ee8314ff2d.png" type = "image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="../../styles/afterLoginStyle.css">
 </head>
-
 <body>
     <header>
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="col1">
-                        <a href="/index.html" class="link">
-                            <div class="logo"></div></a>
+                        <a href="./afterLogin.html" class="link">
+                            <img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-4d2d81aefcf296bc100d9edc114c2ea5.png"
+                                alt="logo" class="logo"></a>
                         <div class="nav" id="locate">
                             <div class="navLoc">
                                 <svg viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +81,7 @@
                                 <p class="search">Search</p>
                             </div>
                         </a>
-                        <button id="signbtn1" class="tag">
+                        <a href="https://www.dunzo.com/checkout" class="tag">
                             <div class="foo">
                                 <span class='badge' id='lblCartCount'> 5 </span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 22" height="24px" width="28px"
@@ -96,10 +95,15 @@
                                 </svg>
                                 <p class="search cartPos">Cart</p>
                             </div>
+                        </a>
+                        <button onclick="user()" class="tag dropbtn">
+                            <div class="foo drop">
+                                <svg viewBox="0 0 24 24" fill="inherit" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" class="sc-64ptou-0 ktZbjU"><g clip-path="url(#clip0)"><path d="M21.95 19.138a.781.781 0 00-1.53.318.816.816 0 01-.165.684.793.793 0 01-.625.297H4.37a.794.794 0 01-.625-.297.816.816 0 01-.165-.684c.81-3.894 4.246-6.739 8.212-6.835a5.272 5.272 0 00.415 0 8.595 8.595 0 016.941 3.815.781.781 0 101.298-.87 10.162 10.162 0 00-5.266-4.001 5.308 5.308 0 002.132-4.252A5.319 5.319 0 0012.001 2a5.319 5.319 0 00-5.313 5.313c0 1.738.84 3.284 2.134 4.254-1.186.39-2.3.998-3.273 1.8a10.192 10.192 0 00-3.498 5.77A2.372 2.372 0 004.371 22H19.63a2.372 2.372 0 002.32-2.862zM8.25 7.312A3.754 3.754 0 0112 3.563a3.754 3.754 0 013.75 3.75 3.755 3.755 0 01-3.56 3.746 10.909 10.909 0 00-.379 0 3.755 3.755 0 01-3.56-3.745z"></path></g><defs><clipPath id="clip0"><path fill="#fff" transform="translate(2 2)" d="M0 0h20v20H0z"></path></clipPath></defs></svg>
+                                <p class="search">Profile</p>
+                            </div>
                         </button>
-                        <div class="gbtn">
-                            <button class="sign" id="signbtn">Sign in</button>
-                        </div>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="index.html" class="log">LogOut</a>
                     </div>
                 </div>
             </div>
@@ -130,27 +134,25 @@
                 </div>
             </div>
             <div class='ctext1'>
-                <div class='ctext2'>
-                <a href="../Items_page/gAndE.html" class="anchor">
+                <a href="../Items_page/general.html" class="anchor">
                     <img src="https://ik.imagekit.io/dunzo/home/tr:w-488,h-360_home_icon/operator-FFWUCfzmUzhok89HMYt0ON2Gy5oZECO73gRenPw11HxAeCLBtTBOG8FMqMTe92UOnScOPMUnjYDcaPVxx7wSFJwXJ3kSR3YRsPby4EgC4zW2mVYLc99zuvVh7O2Ppmx2QMQd40UiwYLGhy0OjbMayr.png"
                         alt="image" class="img-box">
                     <div class="item">
                         <p class="paan">PAAN ITEMS AVAILABLE HERE</p>
                     </div>
                 </a>
-                <a href="../Items_page/gAndE2.html" class="anchor">
+                <a href="../Items_page/general1.html" class="anchor">
                     <img src="https://ik.imagekit.io/dunzo/home/tr:w-488,h-360_home_icon/dunzo/icons/newHome/promoBanner/kitImageUrl/largeIcons/default_pnd_secondary2_1613527381240.png"
                         alt="image" class="img-box"></a>
 
 
-                <a href="../Items_page/gAndE.html" class="anchor">
+                <a href="../Items_page/general.html" class="anchor">
                     <img src="https://ik.imagekit.io/dunzo/home/tr:w-488,h-360_home_icon/operator-ABHxCyRo8CLcEMC0YE43zsmH2XHFv3xr6B8Y3tIdBpKE1NBAjyHS4vgJY3T3z8AEascTap9OETFY0CdvpHj70KZSGFNrCxkFVtUugsMRkyV5jVk9XHl164PCPop56VNkdpLhfymH86JkFjMlYYgQHK.jpg"
                         alt="image" class="img-box"></a>
-                <a href="../Items_page/gAndE2.html" class="anchor anchorC">
+                <a href="../Items_page/general1.html" class="anchor anchorC">
                     <img src="https://ik.imagekit.io/dunzo/home/tr:w-488,h-360_home_icon/dunzo/icons/newHome/promoBanner/kitImageUrl/largeIcons/default_fnv_secondary2_1613527515094.png"
                         alt="image" class="img-box"></a>
             </div>
-        </div>
         </div>
     </div>
     <div class="newItem">
@@ -200,7 +202,6 @@
             <div class="content1">
             </div>
             <div class='ctext1'>
-                <div class="ctext2">
                 <span class="anchor">
                     <img src="https://ik.imagekit.io/dunzo/web-assets/images/d4b.jpg?tr=w-488,h-326,cm-pad_resize"
                         alt="image" class="img-box">
@@ -217,7 +218,6 @@
                     <img src="https://ik.imagekit.io/dunzo/web-assets/images/send-packages.jpg?tr=w-488,h-326,cm-pad_resize"
                         alt="image" class="img-box"></span>
             </div>
-        </div>
         </div>
     </div>
     <div class="flex-box">
@@ -370,4 +370,4 @@
 </body>
 
 </html>
-<script src="../../scripts/indexScript.js"></script>
+<script src="../../scripts/afterLoginScript.js"></script>
