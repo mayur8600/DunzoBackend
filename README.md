@@ -1,6 +1,6 @@
 # PROJECT DUNZO
 
-###### It's an E-Commerce website(Dunzo) clone which deliver grocery items.Our team was given a task to Clone the Dunzo Website. 
+##### It's an E-Commerce website(Dunzo) clone which deliver grocery items.Our team was given a task to Clone the Dunzo Website. 
 
 ## Tech stacks used: 
 ##### To create this clone following Tech stack is used by contributors.
