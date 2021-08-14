@@ -27,14 +27,12 @@
 
 ## LOGIN AND SIGN IN PAGE:
 ##### there is log in and sign up functionality both done on same sign in button. on click of that button we use modal to show login page, Dunzo allow only otp log in method so we also used that method  by providing mobile number user get otp then by applying that otp user can log in. 
-<img src="Images/AfterLogin.png" width="100%">
 <img src="Images/signin.png" width="100%">
 
 ## ITEM PAGES :
 ##### In this page user is able to acces the store near to him, we have added the store data inside this page. we have made two version of this page for give user access before log in and after log in.
 
 <img src="Images/withlogin.png" width="100%">
-<img src="Images/itemPagewln.png" width="100%">
 
 ##### There are many Child pages linked to the Index page and after login page, but for this clone following pages are made.
 
@@ -54,8 +52,8 @@
 
 ### CHECKOUT PAGE AND END PAGES
 
-<img src="Images/checkout.png" width="70%">
-<img src="Images/End.png" width="70%
+<img src="Images/checkout.png" width="100%">
+<img src="Images/End.png" width="100%
 
 #
 
