@@ -44,9 +44,9 @@ router.get("/:id", async function (req, res){
 });
 
 
-router.get("/limit10", async function (req, res){
+router.get("/search/:product", async function (req, res){
     try{
-      const product = await Product.find().limit(10).lean().exec();
+      const product = await Product.find({ product_name: { $regex: req.params.product } }).lean().exec();
 
       return res.status(200).send(product);
     } catch (err){

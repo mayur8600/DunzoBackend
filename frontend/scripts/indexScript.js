@@ -123,82 +123,34 @@ else{
 }
 
 
-
-
-// let bData_div = document.getElementById('bData');
-//     var setTimerId;
-//     async function searchData() {
-//         let query = document.getElementById('myInput2').value;
-//         console.log(query);
-
-//         // if (query.length <= 2) {
-//         //     return false;
-//         // }
-//         let res = await fetch(`http://localhost:4455/stores/search/${query}`);
-//         let data = await res.json();
-//         console.log('data:', data)
-
-//         return data.Search;
-
-//     }
-
-// function takeValue() {
-//     if (setTimerId) {
-//         return false;
-//     }
-//     setTimerId = setTimeout(() => {
-
-//         main();
-//         setTimerId = undefined;
-//     }, 500);
-//     console.log('setTimerId:', setTimerId);
-
-// };
-
-// function appendData(d) {
-//     bData_div.innerHTML = null;
-//     if (d.length > 0) {
-//         bData_div.style.display = "block";
-//     } else {
-//         bData_div.style.display = "none";
-//     }
-//     console.log('d:', d)
-//     bData_div.style.background = "white";
-//     d?.forEach(({ img, store_name, address }) => {
-
-//         let img = document.createElement("img");
-//         img.src = img;
-//         let p = document.createElement('p');
-//         p.innerText = store_name;
-//         let p_add = document.createElement('p');
-//         p_add.innerText = address;
-//         bData_div.append(img, p, p_add);
-//     });
-// };
-
-// async function main() {
-//     let data = await searchData();
-//     appendData(data);
-// };
-
 let movies_div = document.getElementById('movies');
+let sProduct = document.getElementById('sproduct');
+var att = document.getElementById('colFlex')
     var setTimerId;
     async function searchData() {
         let query = document.getElementById('myInput2').value;
         console.log(query);
 
-        // if (query.length <= 2) {
-        //     return false;
-        // }
+        if (query.length == "") {
+            movies_div.style.display = "none"
+            sProduct.style.display = "none";
+        }
+        else{
         let res = await fetch(`http://localhost:4455/stores/search/${query}`);
         let data = await res.json();
+         let result = await fetch(`http://localhost:4455/products/search/${query}`);
+         let dataP = await result.json();
         console.log('data:', data)
+         console.log('dataP:', dataP)
 
-        return data;
+        return [data,dataP];
+        //  return dataP;
+    }
 
     }
 
 function takeValue() {
+    att.style.backgroundColor = 'white';
     if (setTimerId) {
         return false;
     }
@@ -221,17 +173,50 @@ function appendData(d) {
     console.log('d:', d)
     movies_div.style.background = "white";
     d?.forEach(({img, store_name, address}) => {
+        let div = document.createElement("div")
+        div.setAttribute("class", "p_Div")
         let img1 = document.createElement("img");
         img1.src = img;
-        let p = document.createElement('p');
-        p.innerHTML = store_name;
+        img1.setAttribute("class", "p_img")
+        let p_el = document.createElement('p');
+        p_el.innerHTML = store_name;
+        p_el.setAttribute("class", "p_Att");
         let p_add = document.createElement('p');
         p_add.innerHTML = address;
-        movies_div.append(img, p, p_add);
+        p_add.setAttribute("class", "p_Add");
+        div.append(img1, p_el, p_add);
+        console.log(div)
+        movies_div.append(div);
+    });
+};
+
+function appendDataP(d) {
+    sProduct.innerHTML = null;
+    if (d.length > 0) {
+        sProduct.style.display = "block";
+    } else {
+        sProduct.style.display = "none";
+    }
+    console.log('d:', d)
+    sProduct.style.background = "white";
+    d?.forEach(({img, product_name}) => {
+        let div = document.createElement("div")
+        div.setAttribute("class", "p_Div")
+        let img1 = document.createElement("img");
+        img1.src = img;
+        img1.setAttribute("class", "p_img")
+        let p_el = document.createElement('p');
+        p_el.innerHTML = product_name;
+        p_el.setAttribute("class", "p_Att");
+        let btn = document.createElement('buttton');
+        div.append(img1, p_el, btn);
+        console.log(div)
+        sProduct.append(div);
     });
 };
 
 async function main() {
     let data = await searchData();
-    appendData(data);
+    appendData(data[0]);
+    appendDataP(data[1]);
 };
