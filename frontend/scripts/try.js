@@ -125,63 +125,7 @@ else{
 
 
 
-// let bData_div = document.getElementById('bData');
-//     var setTimerId;
-//     async function searchData() {
-//         let query = document.getElementById('myInput2').value;
-//         console.log(query);
-
-//         // if (query.length <= 2) {
-//         //     return false;
-//         // }
-//         let res = await fetch(`http://localhost:4455/stores/search/${query}`);
-//         let data = await res.json();
-//         console.log('data:', data)
-
-//         return data.Search;
-
-//     }
-
-// function takeValue() {
-//     if (setTimerId) {
-//         return false;
-//     }
-//     setTimerId = setTimeout(() => {
-
-//         main();
-//         setTimerId = undefined;
-//     }, 500);
-//     console.log('setTimerId:', setTimerId);
-
-// };
-
-// function appendData(d) {
-//     bData_div.innerHTML = null;
-//     if (d.length > 0) {
-//         bData_div.style.display = "block";
-//     } else {
-//         bData_div.style.display = "none";
-//     }
-//     console.log('d:', d)
-//     bData_div.style.background = "white";
-//     d?.forEach(({ img, store_name, address }) => {
-
-//         let img = document.createElement("img");
-//         img.src = img;
-//         let p = document.createElement('p');
-//         p.innerText = store_name;
-//         let p_add = document.createElement('p');
-//         p_add.innerText = address;
-//         bData_div.append(img, p, p_add);
-//     });
-// };
-
-// async function main() {
-//     let data = await searchData();
-//     appendData(data);
-// };
-
-let movies_div = document.getElementById('movies');
+let newData = document.getElementById('bData');
     var setTimerId;
     async function searchData() {
         let query = document.getElementById('myInput2').value;
@@ -194,7 +138,7 @@ let movies_div = document.getElementById('movies');
         let data = await res.json();
         console.log('data:', data)
 
-        return data;
+        return data.Search;
 
     }
 
@@ -212,22 +156,23 @@ function takeValue() {
 };
 
 function appendData(d) {
-    movies_div.innerHTML = null;
+    newData.innerHTML = null;
     if (d.length > 0) {
-        movies_div.style.display = "block";
+        newData.style.display = "block";
     } else {
-        movies_div.style.display = "none";
+        newData.style.display = "none";
     }
     console.log('d:', d)
-    movies_div.style.background = "white";
-    d?.forEach(({img, store_name, address}) => {
-        let img1 = document.createElement("img");
-        img1.src = img;
+    newData.style.background = "white";
+    d?.forEach(({ img, store_name, address }) => {
+
+        let img = document.createElement("img");
+        img.src = img;
         let p = document.createElement('p');
-        p.innerHTML = store_name;
+        p.innerText = store_name;
         let p_add = document.createElement('p');
-        p_add.innerHTML = address;
-        movies_div.append(img, p, p_add);
+        p_add.innerText = address;
+        bData.append(img, p, p_add);
     });
 };
 

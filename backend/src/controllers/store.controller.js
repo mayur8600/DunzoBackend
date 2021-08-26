@@ -29,13 +29,24 @@ router.get("/", async function (req, res) {
 
 router.get("/:id", async function (req, res) {
        try{
-           const store = await Store.findById(request.params.id).lean().exec();
+           const store = await Store.findById(req.params.id).lean().exec();
 
            return res.status(200).send(store);
        } catch (err) {
 
            return res.status(400).send(err.message);
        }
+});
+
+router.get("/search/:store", async function (req, res) {
+    try{
+        const store = await Store.find({ store_name: { $regex: req.params.store } }).lean().exec();
+        
+        return res.status(200).send(store);
+    } catch (err) {
+
+        return res.status(400).send(err.message);
+    }
 });
 
 router.get("/most", async function (req, res) {
