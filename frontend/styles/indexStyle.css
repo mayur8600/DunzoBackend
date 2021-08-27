@@ -763,16 +763,16 @@ p {
   padding-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, 19%);
-  justify-content: center;
-  grid-gap: 52px;
+  /* justify-content: center; */
+  grid-gap: 67px;
 }
 
 #sproduct {
   padding-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, 19%);
-  justify-content: center;
-  grid-gap: 52px;
+  /* justify-content: center; */
+  grid-gap: 67px;
 }
 /* Style the buttons inside the tab */
 .tab button {
@@ -1140,7 +1140,7 @@ p {
   padding-top: 2%;
 }
 .p_Div {
-  width: 260px;
+  width: 253px;
   height: 350px;
   /* border: 1px solid; */
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -1159,15 +1159,18 @@ p {
 .s_time,
 .s_Add {
   color: #797e8f;
+  
 }
 .s_Att {
   color: black;
   margin-bottom: 0px;
   padding-left: 4%;
   height: 30px;
+  line-height:1.2;
 }
 .s_Add {
   padding-left: 4%;
+  margin-top: 10px;
 }
 .s_clock {
   fill: gray;
@@ -1186,9 +1189,9 @@ p {
 }
 
 #colFlex {
-  display: flex;
+  /* display: flex; */
   margin: auto;
-  margin-left: 30px;
+  /* margin-left: 30px; */
   width: 100%;
   padding-top: 70px;
 }
