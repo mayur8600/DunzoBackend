@@ -95,7 +95,7 @@ else{
 
 }
 function otpNew(){
-var otp2 = document.getElementById('myInput2').value
+var otp2 = document.getElementById('myInput3').value
 var btn1 = document.getElementById("key")
 var btn2 = document.getElementById("key1")
 var otp3 = document.getElementById('this')

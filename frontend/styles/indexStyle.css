@@ -1031,13 +1031,14 @@ p {
   fill: rgb(141, 146, 165);
 }
 #myInput1,
+#myInput3,
 #myInput2 {
   border: none;
   width: 360px;
   height: 50px;
   outline: none;
 }
-#myInput2 {
+#myInput3 {
   margin-left: 20px;
 }
 .flexCheck {
