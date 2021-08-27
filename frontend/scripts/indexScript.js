@@ -50,15 +50,18 @@ modal.style.display = "none";
 }
 
 span1.onclick = function() {
+    
 document.body.style.overflow="visible";
 // modal1.style.display = "none";
 newModal.style.display = "none";
+
 }
 
 findspan.onclick = function() {
     document.body.style.overflow="visible";
     // modal1.style.display = "none";
     findModal.style.display = "none";
+    window.location.reload();
     }
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -126,19 +129,26 @@ else{
 let movies_div = document.getElementById('movies');
 let sProduct = document.getElementById('sproduct');
 var att = document.getElementById('colFlex')
+let empty  = document.getElementById('findbtm')
+let newempty  = document.getElementById('centerCont')
     var setTimerId;
     async function searchData() {
         let query = document.getElementById('myInput2').value;
         console.log(query);
 
-        if (query.length == "") {
+        const str2 = query.charAt(0).toUpperCase() + query.slice(1);
+
+        console.log(str2)
+
+        if (str2.length == "") {
             movies_div.style.display = "none"
             sProduct.style.display = "none";
+            // window.location.reload();
         }
         else{
-        let res = await fetch(`http://localhost:4455/stores/search/${query}`);
+        let res = await fetch(`http://localhost:4455/stores/search/${str2}`);
         let data = await res.json();
-         let result = await fetch(`http://localhost:4455/products/search/${query}`);
+         let result = await fetch(`http://localhost:4455/products/search/${str2}`);
          let dataP = await result.json();
         console.log('data:', data)
          console.log('dataP:', dataP)
@@ -155,7 +165,7 @@ function takeValue() {
         return false;
     }
     setTimerId = setTimeout(() => {
-
+        
         main();
         setTimerId = undefined;
     }, 500);
@@ -166,6 +176,8 @@ function takeValue() {
 function appendData(d) {
     movies_div.innerHTML = null;
     if (d.length > 0) {
+        newempty.style.display = "block";
+        empty.style.display = "none";
         movies_div.style.display = "block";
     } else {
         movies_div.style.display = "none";
@@ -187,14 +199,16 @@ function appendData(d) {
         div.append(img1, p_el, p_add);
         console.log(div)
         movies_div.append(div);
+        store()
     });
 };
 
 function appendDataP(d) {
     sProduct.innerHTML = null;
     if (d.length > 0) {
-        sProduct.style.display = "block";
-    } else {
+        if(movies_div.style.display == "block"){
+        sProduct.style.display = "none";
+    }
         sProduct.style.display = "none";
     }
     console.log('d:', d)
@@ -212,6 +226,7 @@ function appendDataP(d) {
         div.append(img1, p_el, btn);
         console.log(div)
         sProduct.append(div);
+        // store()
     });
 };
 
@@ -220,3 +235,24 @@ async function main() {
     appendData(data[0]);
     appendDataP(data[1]);
 };
+
+function store(){
+    movies_div.style.display = "grid";
+    sProduct.style.display="none";
+}
+
+function product(){
+    movies_div.style.display = "none";
+    sProduct.style.display="grid";
+}
+
+var header = document.getElementById("myTab");
+var btns = header.getElementsByClassName("tablinks");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}

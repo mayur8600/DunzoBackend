@@ -429,7 +429,7 @@
               ></path>
             </svg>
           </div>
-          
+
           <div class="newInput">
             <input
               type="text"
@@ -441,7 +441,7 @@
           <div id="findclose">&times;</div>
         </div>
       </div>
-      <div class="findbtm">
+      <div id="findbtm">
         <div class="essentials">
           <div>
             <div><b>Top up your daily essentials</b></div>
@@ -582,51 +582,60 @@
                   </div>
                 </div>
                 <div class="findFlex">
-                    <div class="findW">
-                      <div class="findImg">
-                        <img
-                          src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-296,h-296,cm-pad_resize_store_thumbnail/stores/71c35a19-d84a-49f9-803e-3c4e49b6e473-1581924257408-store_image.jpg"
-                          alt="Haiko"
-                          class="imgf"
-                        />
-                      </div>
-                      <div class="tWrap">Haiko Supermarket</div>
-                      <div>
-                        <div class="time">
-                          <svg
-                            width="14"
-                            height="14"
-                            viewBox="0 0 14 14"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="clock"
-                          >
-                            <path
-                              d="M7.483 7v.1h2.334v.967h-3.3V4.183h.966V7zM7 12.733A5.733 5.733 0 117 1.267a5.733 5.733 0 010 11.466zm0-.966a4.767 4.767 0 100-9.534 4.767 4.767 0 000 9.534z"
-                              stroke="#fff"
-                              stroke-width=".2"
-                            ></path>
-                          </svg>
-                          <div>40 mins</div>
-                        </div>
+                  <div class="findW">
+                    <div class="findImg">
+                      <img
+                        src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-296,h-296,cm-pad_resize_store_thumbnail/stores/71c35a19-d84a-49f9-803e-3c4e49b6e473-1581924257408-store_image.jpg"
+                        alt="Haiko"
+                        class="imgf"
+                      />
+                    </div>
+                    <div class="tWrap">Haiko Supermarket</div>
+                    <div>
+                      <div class="time">
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="clock"
+                        >
+                          <path
+                            d="M7.483 7v.1h2.334v.967h-3.3V4.183h.966V7zM7 12.733A5.733 5.733 0 117 1.267a5.733 5.733 0 010 11.466zm0-.966a4.767 4.767 0 100-9.534 4.767 4.767 0 000 9.534z"
+                            stroke="#fff"
+                            stroke-width=".2"
+                          ></path>
+                        </svg>
+                        <div>40 mins</div>
                       </div>
                     </div>
                   </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div id="centerCont">
       <div class="searchF">
-      <div id="colFlex">
-        <div id="movies">
+        <div class="newTab">
+        <div class="tab" id="myTab">
+          <button class="tablinks active" onclick="store()">
+            Store
+          </button>
+          <button class="tablinks" onclick="product()">
+            Product
+          </button>
         </div>
-        <div id="sproduct">
+      </div>
+        <div id="colFlex">
+          <div id="movies"></div>
+          <div id="sproduct"></div>
         </div>
       </div>
     </div>
     </div>
-    
 
     <!-- The Modal -->
     <div id="myModal1" class="modal">
