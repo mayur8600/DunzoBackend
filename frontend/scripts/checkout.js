@@ -1,12 +1,15 @@
 var count1 = 0;
-function submitAddress() {
-  var res = document.getElementById("inputBox");
+var res = document.getElementById("specialbtn");
+res.disabled = true;
+function submitAddress(e) {
+  e.preventDefault();
+  // var res = document.getElementById("specialbtn");
   var a = document.getElementById("address").value;
   var c = document.getElementById("city").value;
   var p = document.getElementById("pin").value;
-
+  
   if (a != "" && c != "" && p != "") {
-    res.style.display = "inherit";
+    res.disabled = false;
   }
 }
 
@@ -48,8 +51,8 @@ function cartItem() {
   }
 
   if (valid?.length > 0) {
-    n.innerHTML = `<h2><b>Total Price :₹ ${m - (m * 30) / 100}</b></h2>`;
-    g.innerHTML = `<h2><b>Total Price :₹ ${m - (m * 30) / 100}</b></h2>`;
+    n.innerHTML = `<h2><b>Total Price :₹ ${Math.floor(m - (m * 30) / 100)}</b></h2>`;
+    g.innerHTML = `<h2><b>Total Price :₹ ${Math.floor(m - (m * 30) / 100)}</b></h2>`;
     // localStorage.removeItem("coupen");
   } else {
     n.innerHTML = `<h2><b>Total Price : ₹ ${m}</b><h2>`;
@@ -61,7 +64,7 @@ function apply() {
   var n = document.getElementById("priceD");
   var coupen = document.getElementById("btnSave").value;
   if (coupen == "masai30") {
-    n.innerHTML = `<h2><b>Total Price :₹ ${m - (m * 30) / 100}</b></h2>`;
+    n.innerHTML = `<h2><b>Total Price :₹ ${Math.floor(m - (m * 30) / 100)}</b></h2>`;
   }
 }
 
@@ -135,8 +138,8 @@ function loadScript(src) {
 // const cartItem = data[0]?.cart;
 // const usID = data[0]?._id;
 
-const name = "test";
-const email = "test@gmail.com";
+const name = "User";
+const email = "user@gmail.com";
 
 async function displayRazorpay() {
     
@@ -150,12 +153,12 @@ async function displayRazorpay() {
 
 
   if (valid?.length > 0) {
-      var p = m - (m * 30) / 100
+      var p = Math.floor(m - (m * 30) / 100)
       
   }else{
       var p = m
   }
-      
+      console.log(p)
 //       const data = await fetch(
 //         `http://localhost:4455/razorpay/${m - (m * 30) / 100}`,
 //         { method: "POST" }
@@ -180,9 +183,9 @@ async function displayRazorpay() {
     currency: data.currency,
     amount: data.amount.toString(),
     order_id: data.id,
-    name: "Payments",
-    description: "Thank you for nothing. Please give us some money",
-    image: "",
+    name: "Dunzo India Pvt Ltd",
+    description: "Total amount to pay.",
+    image: "https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-footer-a7423f59ce95bf41719960ee8314ff2d.png",
     handler: function (response) {
       var kid = response.razorpay_payment_id;
       if(kid != ""){

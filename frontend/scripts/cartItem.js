@@ -165,7 +165,7 @@ function apply() {
 var n = document.getElementById('priceD');
 var coupen = document.getElementById('btnSave').value
 if(coupen == "masai30"){
-    n.innerHTML = `<h3><b>Total Price :₹ ${m-((m*30)/100)}</b></h3>`;
+    n.innerHTML = `<h3><b>Total Price :₹ ${Math.floor(m-((m*30)/100))}</b></h3>`;
     if (localStorage.getItem('coupen') == null) {
     localStorage.setItem('coupen', JSON.stringify(bool))
 }

@@ -131,7 +131,29 @@
                 <div style="opacity: 0.4;">Billing Address</div>
 
                 <form>
+                    
+                    <div class="address-input">
+                        <input type="text" placeholder="Enter your Name" id="address" required />
+                        <input type="text" placeholder="Enter your full Address" id="address" required />
+                        <input type="text" placeholder="Enter your city" id="city" required />
+                        <input type="number" placeholder="Enter your city pin" id="pin" required />
+                    </div>
+
                     <div class="flex_Box">
+                        <div class="conSel">
+                            <div class="oncon">State/ Union Territiry</div>
+                            <div>
+                                <select name="" class="country" style="opacity: 0.5;">
+                                    <option>Maharashtra</option>
+                                    <option>Delhi</option>
+                                    <option>Haryana</option>
+                                    <option>Karnataka</option>
+                                    <option>Tamil Nadu</option>
+                                    <option>Telangana</option>
+
+                                </select>
+                            </div>
+                        </div>
                         <div class="conSel">
                             <div class="oncon">Country</div>
                             <div>
@@ -140,33 +162,19 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="conSel">
-                            <div class="oncon">State/ Union Territiry</div>
-                            <div>
-                                <select name="" class="country" style="opacity: 0.5;">
-                                    <option>Please select...</option>
-                                    <option>Delhi</option>
-                                    <option>Haryana</option>
-                                    <option>Karnataka</option>
-                                    <option>Maharashtra</option>
-                                    <option>Tamil Nadu</option>
-                                    <option>Telangana</option>
-
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="address-input">
-                        <input type="text" placeholder="Enter your full Address" id="address" required />
-                        <input type="text" placeholder="Enter your city" id="city" required />
-                        <input type="number" placeholder="Enter your city pin" id="pin" required />
                     </div>
 
                     <div class="submitAddress">
-                        <button onclick="submitAddress()">Submit</button>
+                        <button onclick="submitAddress(event)">Submit</button>
                     </div>
             </div>
-            <div id="inputBox">
+            <div class="rowfeed">
+                <p>Feedback</p>
+            </div>
+            <div class="feedback">
+                <textarea type="text" class='inpFeed' placeholder="Enter Your feedback if any!"></textarea>
+            </div>
+            <!-- <div id="inputBox">
                 <div id="creditCard">
                     <input type="text" placeholder="Name on Card" id="name" required>
                     <input type="number" placeholder="Card Number" id="cNum" required>
@@ -208,19 +216,19 @@
                             </div>
                         </div>
                         <div>
-                            <input type="password" id="cvv" placeholder="Security Code" required>
+                            <input type="password" id="cvv" placeholder="Security Code" required></input>
                         </div>
 
                     </div>
                     <div>
-                        <input type="checkbox" id="check"> Remember this Card </input>
+                        <input type="checkbox" id="check"> Remember this Card</input>
                     </div>
                     <div class="tool">
                         <img src="https://www.vippng.com/png/detail/35-355987_facebook-lock-icon-png-download-secure-svg.png"
                             alt="lock" class="secure">
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
 
@@ -266,7 +274,7 @@
 
             </div>
 
-            <button onclick="shoppingComplete(event)">Complete Payment</button>
+            <button id="specialbtn" onclick="shoppingComplete(event)">Complete Payment</button>
             <h1 id="notification"></h1>
         </div>
     </div>
