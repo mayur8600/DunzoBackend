@@ -321,13 +321,29 @@ localStorage.setItem('cart', JSON.stringify(arr1));
     window.location.reload();
 }
 
-// function toShowProvisions() {
-//     let provisionsData = document.getElementById('provisionsData');
-//     let breakFastData = document.getElementById('breakFastData');
-//     provisionsData.style.display = 'inherit';
-//     breakFastData.style.display = 'none';
+let provisionsData = document.getElementById('data1');
+let breakFastData = document.getElementById('data');
+let dataColor = document.getElementById("type1");
+let proviColor = document.getElementById('type2');
 
-// }
+function toShowBreakFast() {
+   
+    proviColor.style.color= "rgb(15, 25, 56)";
+    proviColor.style.opacity="0.8";
+    dataColor.style.color = "rgb(0, 210, 144)";
+    provisionsData.style.display = 'none';
+    breakFastData.style.display = 'inherit';
+
+}
+
+function toShowProvisions() {
+    dataColor.style.color = "rgb(15, 25, 56)";
+    dataColor.style.opacity = "0.8";
+    proviColor.style.color= "rgb(0, 210, 144)";
+    provisionsData.style.display = 'inherit';
+    breakFastData.style.display = 'none';
+
+}
 
 function checkOut(){
 window.location.href="../Checkout_page/checkout.html"
