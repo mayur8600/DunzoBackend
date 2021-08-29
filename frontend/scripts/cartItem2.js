@@ -146,7 +146,7 @@ arr.push(abc[i].name)
 }
 
 
-
+var count = 1;
 
 function cartItem() {
 let data = JSON.parse(localStorage.getItem("cart"));
@@ -171,10 +171,11 @@ if(data?.length > 0){
 let brand = document.getElementById('imageDivEmt')
 var element = document.createElement('div')
 html="";
+
 for(i=0; i < arr.length; i++){
 html += `<div class="textData"><div class="listMark"></div>${arr[i]}</div><div class="button-div-con" id = "buttMar"><button onclick=Remove(${i+1}) class = "button-div-ex">
            <div class="sign2" id="minus1">-</div>
-             1
+             ${count}
            <div class="sign2" id="minus2">+</div>
          </button>
          </div>`
@@ -183,6 +184,9 @@ brand.innerHTML = `${html}`;
 
 var n = document.getElementById('priceD');
 n.innerHTML = `₹ ${m}`;
+
+
+    
 }
 cartItem()
 
@@ -194,7 +198,7 @@ function apply() {
 var n = document.getElementById('priceD');
 var coupen = document.getElementById('btnSave').value
 if(coupen == "masai30"){
-    n.innerHTML = `₹ ${m-((m*30)/100)}`;
+    n.innerHTML = `₹ ${Math.floor(m-(m*30)/100)}`;
     if (localStorage.getItem('coupen') == null) {
     localStorage.setItem('coupen', JSON.stringify(bool))
 }
@@ -330,7 +334,9 @@ function toShowBreakFast() {
    
     proviColor.style.color= "rgb(15, 25, 56)";
     proviColor.style.opacity="0.8";
+    proviColor.style.fontWeight = "500";
     dataColor.style.color = "rgb(0, 210, 144)";
+    dataColor.style.fontWeight = "600"
     provisionsData.style.display = 'none';
     breakFastData.style.display = 'inherit';
 
@@ -339,7 +345,9 @@ function toShowBreakFast() {
 function toShowProvisions() {
     dataColor.style.color = "rgb(15, 25, 56)";
     dataColor.style.opacity = "0.8";
+    dataColor.style.fontWeight = "500"
     proviColor.style.color= "rgb(0, 210, 144)";
+    proviColor.style.fontWeight = "600";
     provisionsData.style.display = 'inherit';
     breakFastData.style.display = 'none';
 

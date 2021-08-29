@@ -1,13 +1,19 @@
 var count1 = 0;
 
-var res = document.getElementById("specialbtn");
+var resKey = document.getElementById("specialbtn");
 var addDiv = document.getElementById("addressBox");
 var msgDiv = document.getElementById("successMsg");
 
-res.disabled = true;
+resKey.disabled = true;
+if(resKey.disabled == true){
+
+  resKey.style.backgroundColor = "#cccccc";
+  resKey.style.hover = "false";
+
+}
 function submitAddress(e) {
   e.preventDefault();
-  var res = document.getElementById("specialbtn");
+  var resKey = document.getElementById("specialbtn");
   var a = document.getElementById("address").value;
   var c = document.getElementById("city").value;
   var p = document.getElementById("pin").value;
@@ -17,7 +23,9 @@ function submitAddress(e) {
     msgDiv.style.display = "inherit";
   
   if (a != "" && c != "" && p != "") {
-    res.disabled = false;
+    resKey.style.backgroundColor = "rgb(0, 210, 144)";
+    resKey.disabled = false;
+    
   }
 }
 
