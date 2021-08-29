@@ -268,17 +268,17 @@
         <div class="sub-bottom-div">
             <div class="left-items">
                 <div class="left-items-div">
-                    <button onclick="toShow()" class="link-button link-button2 link-button3">BreakFast & Dairy</button>
-                    <button onclick="toShowProvisions()" class="link-button link-button2 link-button3">Provisions</button>
-                    <button onclick="toShow()" class="link-button link-button2 link-button3">Condiments</button>
-                    <button onclick="toShow()" class="link-button link-button2 link-button3">Instant Foods</button>
-                    <button onclick="toShow()" class="link-button link-button2 link-button3">Beverages</button>
-                    <button onclick="toShow()" class="link-button link-button2 link-button3">Snacks & Frozen
+                    <button onclick="toShowBreakFast()" class="link-button link-button2 link-button3" id="type1">BreakFast & Dairy</button>
+                    <button onclick="toShowProvisions()" class="link-button link-button2 link-button3" id="type2">Provisions</button>
+                    <button onclick="toShow()" class="link-button link-button2 link-button3" id="type3">Condiments</button>
+                    <button onclick="toShow()" class="link-button link-button2 link-button3" id="type4">Instant Foods</button>
+                    <button onclick="toShow()" class="link-button link-button2 link-button3" id="type5">Beverages</button>
+                    <button onclick="toShow()" class="link-button link-button2 link-button3" id="type6">Snacks & Frozen
                         Food</button>
-                    <button onclick="toShow()" class="link-button link-button2 link-button3">Chocolates &
+                    <button onclick="toShow()" class="link-button link-button2 link-button3" id="type7">Chocolates &
                         Ice-Cream</button>
-                    <button onclick="toShow()" class="link-button link-button2 link-button3">Personal Care</button>
-                    <button onclick="toShow()" class="link-button link-button2 link-button3">Cleaning &
+                    <button onclick="toShow()" class="link-button link-button2 link-button3" id="type8">Personal Care</button>
+                    <button onclick="toShow()" class="link-button link-button2 link-button3" id="type9">Cleaning &
                         Household</button>
                 </div>
             </div>
@@ -485,9 +485,340 @@
                         </div>
 
                     </div>
+                    <!--  #Provisions#  -->  
+                    <div class="head-mid-div" id="data1">
+                        <p>Provisions</p>
+                        <div class="sub-head-mid-div">
+                            <h4>Rice & Grains</h4>
+                            <div class="content-mid-div">
+                                <div class="image-mid-div">
+                                    <img src="https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1625126015318_product_5bc87ae10d298a283c2972e7_1.jpg"
+                                        alt="Daawat Pulao Basmati Rice">
+                                </div>
+                                <div class="para-mid-div">
+                                    <p class="para1"><a href="../ItemInfo_Page/KwalityBrownBread.html">Daawat Pulao Basmati Rice</a></p>
+                                    <p class="para4">
+                                        Daawat pulao basmati rice a dish of mysterious, ancient origins that has found its way
+                                         all over the world...
+                                    </p>
+                                    <p class="para2">1 Kg</p>
+                                    <p class="para3">₹ 120</p>
+                                </div>
+                                <div class="button-mid-div">
+                                    <div class="sub-button-mid-div">
+                                        <div class="button-div-con">
+                                            <button onclick="addToCart(0)" shape="circular" class="button-div-ex">
+                                                <div class="sign2">+</div>
+                                                ADD
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-mid-div">
+                                <div class="image-mid-div">
+                                    <img src="https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1615699842383_product_5bc87ae20d298a283c297894_1.jpg"
+                                        alt="India Gate Classic Basmati Rice">
+                                </div>
+                                <div class="para-mid-div">
+                                    <p class="para1"><a href="../ItemInfo_Page/KwalityLadiPavBun.html">India Gate Classic Basmati Rice</a></p>
+                                    <p class="para2">1 Kg</p>
+                                    <p class="para3">₹ 220</p>
+                                </div>
+                                <div class="button-mid-div">
+                                    <div class="sub-button-mid-div">
+                                        <div class="button-div-con">
+                                            <button onclick="addToCart(1)" shape="circular" class="button-div-ex">
+                                                <div class="sign2">+</div>
+                                                ADD
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-mid-div">
+                                <div class="image-mid-div">
+                                    <img src="https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/Nit1dzJRVjFvQWx3U2VGek9Bdk9Odz09-product_image.jpg"
+                                        alt="Kohinoor Charminar Brown Rice">
+                                </div>
+                                <div class="para-mid-div">
+                                    <p class="para1"><a href="../ItemInfo_Page/KwalityLadiPavBun.html">Kohinoor Charminar Brown Rice</a></p>
+                                    <p class="para2">1 Kg</p>
+                                    <p class="para3">₹ 109</p>
+                                </div>
+                                <div class="button-mid-div">
+                                    <div class="sub-button-mid-div">
+                                        <div class="button-div-con">
+                                            <button onclick="addToCart(2)" shape="circular" class="button-div-ex">
+                                                <div class="sign2">+</div>
+                                                ADD
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-head-mid-div">
+                            <h4>Pulses</h4>
+                            <div class="content-mid-div">
+                                <div class="image-mid-div">
+                                    <img src="https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/ZExkMEllNnhzM3RJQ01TSkR2NlJhUT09-product_image.jpg"
+                                        alt="Black Whole Masoor Dal">
+                                </div>
+                                <div class="para-mid-div">
+                                    <p class="para1">Black Whole Masoor Dal</p>
+                                    <p class="para2">1 Kg</p>
+                                    <p class="para3">₹ 120</p>
+                                </div>
+                                <div class="button-mid-div">
+                                    <div class="sub-button-mid-div">
+                                        <div class="button-div-con">
+                                            <button onclick="addToCart(3)" shape="circular" class="button-div-ex">
+                                                <div class="sign2">+</div>
+                                                ADD
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-mid-div">
+                                <div class="image-mid-div">
+                                    <img src="https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1615706470007_product_5c135ae66994164bc9f7fdb7_1.jpg"
+                                        alt="Green Moong Dal">
+                                </div>
+                                <div class="para-mid-div">
+                                    <p class="para1">Green Moong Dal</p>
+                                    <p class="para2">1 Kg</p>
+                                    <p class="para3">₹ 140</p>
+                                </div>
+                                <div class="button-mid-div">
+                                    <div class="sub-button-mid-div">
+                                        <div class="button-div-con">
+                                            <button onclick="addToCart(4)" shape="circular" class="button-div-ex">
+                                                <div class="sign2">+</div>
+                                                ADD
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content-mid-div">
+                                <div class="image-mid-div">
+                                    <img src="https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1615706651987_product_5c135ae66994164bc9f7fdc0_1.jpg"
+                                        alt="Groundnuts">
+                                </div>
+                                <div class="para-mid-div">
+                                    <p class="para1">Groundnuts</p>
+                                    <p class="para2">1 kg</p>
+                                    <p class="para3">₹ 200</p>
+                                </div>
+                                <div class="button-mid-div">
+                                    <div class="sub-button-mid-div">
+                                        <div class="button-div-con">
+                                            <button onclick="addToCart(5)" shape="circular" class="button-div-ex">
+                                                <div class="sign2">+</div>
+                                                ADD
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-head-mid-div">
+                            
+                            <h4>Atta & Flour</h4>
+                            <div class="content-mid-div">
+                                <div class="image-mid-div">
+                                    <img src="https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/aFlwL0h0d2RoT0poaG1WaU1zb3djUT09-product_image.jpg"
+                                        alt="Aashirvaad Multigrain Atta">
+                                </div>
+                                <div class="para-mid-div">
+                                    <p class="para1">Aashirvaad Multigrain Atta</p>
+                                    <p class="para4">Aashirvaad Multigrain Atta gives fluffiest, soft and tasty rotis and the best of nature, with every bite..
+                                    </p>
+                                    <p class="para2">5 Kg</p>
+                                    <p class="para3">₹ 285</p>
+
+                                </div>
+                                <div class="button-mid-div">
+                                    <div class="sub-button-mid-div">
+                                        <div class="button-div-con">
+                                            <button onclick="addToCart(6)" shape="circular" class="button-div-ex">
+                                                <div class="sign2">+</div>
+                                                ADD
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-mid-div">
+                                <div class="image-mid-div">
+                                    <img src="https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/cUd1aGxwbE1VMEZ1S3pGUDhlb3VUdz09-product_image.jpg"
+                                        alt="Blue Bird Maida Flour">
+                                </div>
+                                <div class="para-mid-div">
+                                    <p class="para1">Blue Bird Maida Flour</p>
+                                    <p class="para2">1 Kg</p>
+                                    <p class="para3">₹ 65</p>
+                                </div>
+                                <div class="button-mid-div">
+                                    <div class="sub-button-mid-div">
+                                        <div class="button-div-con">
+                                            <button onclick="addToCart(7)" shape="circular" class="button-div-ex">
+                                                <div class="sign2">+</div>
+                                                ADD
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-mid-div">
+                                <div class="image-mid-div">
+                                    <img src="https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/VVhnT3Y5YlZkbzVlL2RCVWVpamFsQT09-product_image.jpg"
+                                        alt="Besan Flour">
+                                </div>
+                                <div class="para-mid-div">
+                                    <p class="para1">Besan Flour</p>
+                                    <p class="para2">1 Kg</p>
+                                    <p class="para3">₹ 130</p>
+
+                                </div>
+                                <div class="button-mid-div">
+                                    <div class="sub-button-mid-div">
+                                        <div class="button-div-con">
+                                            <button onclick="addToCart(6)" shape="circular" class="button-div-ex">
+                                                <div class="sign2">+</div>
+                                                ADD
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-mid-div">
+                                <div class="image-mid-div">
+                                    <img src="https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/TmZiOTZhYWxNZ2MycVUvWVlzUDl0Zz09-product_image.jpg"
+                                        alt="Brown & Polson Cornflour">
+                                </div>
+                                <div class="para-mid-div">
+                                    <p class="para1">Brown & Polson Cornflour</p>
+                                    <p class="para2">100 Gms</p>
+                                    <p class="para3">₹ 25</p>
+
+                                </div>
+                                <div class="button-mid-div">
+                                    <div class="sub-button-mid-div">
+                                        <div class="button-div-con">
+                                            <button onclick="addToCart(6)" shape="circular" class="button-div-ex">
+                                                <div class="sign2">+</div>
+                                                ADD
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-head-mid-div">
+                            
+                            <h4>Oils & Ghee</h4>
+                            <div class="content-mid-div">
+                                <div class="image-mid-div">
+                                    <img src="https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/cWZnQ3ZrQjlVRkphcVliOThTMXhWQT09-product_image.jpg"
+                                        alt="Saffola Gold Oil Pouch">
+                                </div>
+                                <div class="para-mid-div">
+                                    <p class="para1">Saffola Gold Oil Pouch</p>
+                                    <p class="para2">5 Ltr</p>
+                                    <p class="para3">₹ 1020</p>
+
+                                </div>
+                                <div class="button-mid-div">
+                                    <div class="sub-button-mid-div">
+                                        <div class="button-div-con">
+                                            <button onclick="addToCart(6)" shape="circular" class="button-div-ex">
+                                                <div class="sign2">+</div>
+                                                ADD
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-mid-div">
+                                <div class="image-mid-div">
+                                    <img src="https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1615699933860_product_5bc87ae10d298a283c297346_1.jpg"
+                                        alt="Dalda Vanaspathi Ghee">
+                                </div>
+                                <div class="para-mid-div">
+                                    <p class="para1">Dalda Vanaspathi Ghee</p>
+                                    <p class="para4">.Dalda vanaspathi ghee can be consumed for improved digestion and also good supply of energy and offers energy to human body. Ghee is very fit for our body, nourishes the skin and recovers complexion...
+                                    </p>
+                                    <p class="para2">1 Kg</p>
+                                    <p class="para3">₹ 200</p>
+                                </div>
+                                <div class="button-mid-div">
+                                    <div class="sub-button-mid-div">
+                                        <div class="button-div-con">
+                                            <button onclick="addToCart(7)" shape="circular" class="button-div-ex">
+                                                <div class="sign2">+</div>
+                                                ADD
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-mid-div">
+                                <div class="image-mid-div">
+                                    <img src="https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/T01seDFtcG1SYkdyeWhkM3NTSitJUT09-product_image.jpg"
+                                        alt="Fortune Kachi Ghani Pure Mustard Oil Bottle">
+                                </div>
+                                <div class="para-mid-div">
+                                    <p class="para1">Fortune Kachi Ghani Pure Mustard Oil Bottle</p>
+                                    <p class="para4">Kachi ghani pure mustard oil is a premium mustard oil that increases the taste and flavour in the food. The oil contains the nutrients like anti oxidants and various essential oils which help in keeping up the health... 
+                                    </p>
+                                    <p class="para2">5 Ltr</p>
+                                    <p class="para3">₹ 1100</p>
+
+                                </div>
+                                <div class="button-mid-div">
+                                    <div class="sub-button-mid-div">
+                                        <div class="button-div-con">
+                                            <button onclick="addToCart(6)" shape="circular" class="button-div-ex">
+                                                <div class="sign2">+</div>
+                                                ADD
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-mid-div">
+                                <div class="image-mid-div">
+                                    <img src="https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/VThkZklVN2ZtVVRlVFNGS3hlZGJBdz09-product_image.jpg"
+                                        alt="Gemini Refined Sunflower Oil With Nutri-V">
+                                </div>
+                                <div class="para-mid-div">
+                                    <p class="para1">Gemini Refined Sunflower Oil With Nutri-V</p>
+                                    <p class="para2">1 Ltr</p>
+                                    <p class="para3">₹ 182</p>
+
+                                </div>
+                                <div class="button-mid-div">
+                                    <div class="sub-button-mid-div">
+                                        <div class="button-div-con">
+                                            <button onclick="addToCart(6)" shape="circular" class="button-div-ex">
+                                                <div class="sign2">+</div>
+                                                ADD
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                    </div>
                 </div>
 
-                <!--  #Provisions#  -->
+              
                 
             </div>
 

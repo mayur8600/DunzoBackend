@@ -1,17 +1,28 @@
 var count1 = 0;
+
 var res = document.getElementById("specialbtn");
+var addDiv = document.getElementById("addressBox");
+var msgDiv = document.getElementById("successMsg");
+
 res.disabled = true;
 function submitAddress(e) {
   e.preventDefault();
-  // var res = document.getElementById("specialbtn");
+  var res = document.getElementById("specialbtn");
   var a = document.getElementById("address").value;
   var c = document.getElementById("city").value;
   var p = document.getElementById("pin").value;
+  
+     
+    addDiv.style.display = "none";
+    msgDiv.style.display = "inherit";
   
   if (a != "" && c != "" && p != "") {
     res.disabled = false;
   }
 }
+
+ 
+
 
 let abc = JSON.parse(localStorage.getItem("cart"));
 var data_div = document.getElementById("data1");
@@ -44,9 +55,15 @@ function cartItem() {
   var element = document.createElement("div");
   html = "";
   for (i = 0; i < arr.length; i++) {
-    html += `<div id=${i + 1}><span>➤ </span>${
-      arr[i]
-    }</div><button onclick=Remove(${i + 1})>Remove</button>`;
+    // html += `<div id=${i + 1}><span>➤ </span>${
+    //   arr[i]
+    // }</div><button onclick=Remove(${i + 1})>Remove</button>`;
+    html += `<div class="textData"><div class="listMark"></div>${arr[i]}</div><div class="button-div-con" id = "buttMar"><button onclick=Remove(${i+1}) class = "button-div-ex">
+           <div class="sign2" id="minus1">-</div>
+             1
+           <div class="sign2" id="minus2">+</div>
+         </button>
+         </div>`
     brand.innerHTML = `Items :${html}`;
   }
 
@@ -82,6 +99,16 @@ function Remove(val) {
   localStorage.setItem("cart", JSON.stringify(arr1));
   window.location.reload();
 }
+
+
+// address submitted box close function
+
+// function closeIt() {
+//       window.location.reload();
+//       // msgDiv.style.display = "none"; 
+//       // addDiv.style.display = "inherit";
+     
+// }
 
 function shoppingComplete(e) {
   e.preventDefault();
