@@ -40,7 +40,7 @@
 ## CART ITEMS
 ##### In this page we can add iten in the cart for the purchace and proceed to checkout page
 
-<img src="Images/cart.png" width="100%">
+<img src="Images/cart.PNG" width="100%">
 
 
 #
