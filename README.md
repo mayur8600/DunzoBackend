@@ -1,15 +1,16 @@
-# PROJECT DUNZO
+![Logo](https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-4d2d81aefcf296bc100d9edc114c2ea5.png)
 
-##### It's an E-Commerce website(Dunzo) clone which deliver grocery items.Our team was given a task to Clone the Dunzo Website. 
+# 
+
+##### It's an E-Commerce website(Dunzo) clone which deliver grocery items.Our team was given a task to Clone the Dunzo Website with Backend. 
 
 ## Tech stacks used: 
 ##### To create this clone following Tech stack is used by contributors.
 
-### -HTML
-### -CSS
-### -JAVA-SCRIPT
-
-<img src="https://images.squarespace-cdn.com/content/v1/56b8dfcf62cd94ec072ddb33/1547134228418-XO27PTIE8BYNJCK3K7LS/htlm+css+and+js+logo.png" width="100%">
+### - HTML
+### - CSS
+### - JAVA-SCRIPT
+### - MongoDB
 
 #
 
@@ -39,33 +40,37 @@
 ## CART ITEMS
 ##### In this page we can add iten in the cart for the purchace and proceed to checkout page
 
-<img src="Images/cartItem.png" width="100%">
+<img src="Images/cart.png" width="100%">
 
 #
-
-## DUNZO PARTNER
-<img src="Images/DunzoPartner.png" width="100%">
-
-#
-## Product feature page
-<img src="Images/extraInfo.png" width="100%">
 
 ### CHECKOUT PAGE
-
 <img src="Images/checkout.png" width="100%">
+
+#
+
+## Payment
+<img src="Images/razorpay.png" width="100%">
+
+
 
 #
 
 ## PRODUCT PAGES & KEY FEATURES :
 ### There are some Key Features which are added in website clone such as :
 ##### Cart Content, Add and remove item from Cart.
+##### All Data stored in MongoDB Backend.
 ##### Coupon Application feature.
-##### Checkout Page with Payment Status.
+#####  Use Razorpay for Payment.
 ##### Payment Mode Message. CART! PAYMENT!
 ##### Animated End Page added.
 
 #
 
+## Optimizations
+
+We made this website so much optimized way as compared to the original website we write less no. Of code and more functional.
+#
 ## Team Members and Contributors
 
 ### Mayur Kamthe
@@ -78,12 +83,7 @@
 - *Email* : mr.rupendra11@gmail.com
 - *Linkedin* : https://www.linkedin.com/in/rupendra-singh-6430ab16a/
 
-### Abhishek Soni
-- *Github* : https://github.com/abhi270794/
-- *Email* : abhishek.soni2707@gmail.com
-- *Linkedin* : https://www.linkedin.com/in/abhishek-soni-953839107/
-
-### Rohitkumar Chaudhari
-- *Github* : https://github.com/rohitc437/
-- *Email* : rohitc437@gmail.com
-- *Linkedin* : https://www.linkedin.com/in/rohitkumar-chaudhari-0160b9119/
+### Naveen Kumar
+- *Github* : https://github.com/Naveenverma440/
+- *Email* : naveenverma440@gmail.com
+- *Linkedin* : https://www.linkedin.com/in/naveen-kumar-16ba9518b/
