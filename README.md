@@ -41,11 +41,7 @@
 ##### In this page we can add iten in the cart for the purchace and proceed to checkout page
 
 <img src="Images/cart.png" width="100%">
-
-#
-
-### CHECKOUT PAGE
-<img src="Images/checkout.png" width="100%">
+s
 
 #
 
@@ -58,11 +54,10 @@
 
 ## PRODUCT PAGES & KEY FEATURES :
 ### There are some Key Features which are added in website clone such as :
-##### Cart Content, Add and remove item from Cart.
+##### Cart 
 ##### All Data stored in MongoDB Backend.
 ##### Coupon Application feature.
 #####  Use Razorpay for Payment.
-##### Payment Mode Message. CART! PAYMENT!
 ##### Animated End Page added.
 
 #
