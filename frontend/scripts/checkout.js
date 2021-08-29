@@ -5,6 +5,15 @@ var addDiv = document.getElementById("addressBox");
 var msgDiv = document.getElementById("successMsg");
 
 res.disabled = true;
+if(res.disabled == true){
+
+  res.style.backgroundColor = "gray"
+
+}
+else{
+
+  res.style.backgroundColor = "rgb(0, 210, 144);"
+}
 function submitAddress(e) {
   e.preventDefault();
   var res = document.getElementById("specialbtn");
