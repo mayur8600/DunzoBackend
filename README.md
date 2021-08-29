@@ -41,7 +41,7 @@
 ##### In this page we can add iten in the cart for the purchace and proceed to checkout page
 
 <img src="Images/cart.png" width="100%">
-s
+
 
 #
 
