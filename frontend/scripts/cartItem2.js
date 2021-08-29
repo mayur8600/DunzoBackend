@@ -194,7 +194,7 @@ function apply() {
 var n = document.getElementById('priceD');
 var coupen = document.getElementById('btnSave').value
 if(coupen == "masai30"){
-    n.innerHTML = `₹ ${m-((m*30)/100)}`;
+    n.innerHTML = `₹ ${Math.floor(m-(m*30)/100)}`;
     if (localStorage.getItem('coupen') == null) {
     localStorage.setItem('coupen', JSON.stringify(bool))
 }
@@ -330,7 +330,9 @@ function toShowBreakFast() {
    
     proviColor.style.color= "rgb(15, 25, 56)";
     proviColor.style.opacity="0.8";
+    proviColor.style.fontWeight = "500";
     dataColor.style.color = "rgb(0, 210, 144)";
+    dataColor.style.fontWeight = "600"
     provisionsData.style.display = 'none';
     breakFastData.style.display = 'inherit';
 
@@ -339,7 +341,9 @@ function toShowBreakFast() {
 function toShowProvisions() {
     dataColor.style.color = "rgb(15, 25, 56)";
     dataColor.style.opacity = "0.8";
+    dataColor.style.fontWeight = "500"
     proviColor.style.color= "rgb(0, 210, 144)";
+    proviColor.style.fontWeight = "600";
     provisionsData.style.display = 'inherit';
     breakFastData.style.display = 'none';
 
