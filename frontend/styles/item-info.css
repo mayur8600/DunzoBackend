@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: 'Poppins', sans-serif;
 }
 
 #cart {
@@ -92,16 +93,15 @@ nav {
 }
 
 .btn-sign {
-    width: 150px;
-    height: 32px;
+    width: 170px;
+    padding: 2.5%;
     margin-top: 10px;
     border-radius: 50px;
     background-color: #00D290;
     border: none;
     color: white;
-    font-weight: 600;
-
-
+    font-weight: 500;
+    cursor: pointer;
 }
 
 .navleft {
@@ -247,7 +247,7 @@ p {
 
 .main-h1 {
     border: 2px solid;
-    border-color: rgb(133, 241, 133);
+    border-color: rgb(231, 232, 235);
     width: 1200px;
     height: 1000px;
     background-color: white;
@@ -257,29 +257,56 @@ p {
 }
 
 hr{
-    border-color: rgb(155, 224, 155);
+    border-color: rgb(231, 232, 235);
     border-bottom: hidden;
 }
 
 #Yourcart {
     float: right;
     border-left: 1px solid;
-    border-color: rgb(133, 241, 133);
+    border-color: rgb(231, 232, 235);
     height: 100px;
 }
 
 #productdesc {
     margin-top: 100px;
-    margin-left: 85px;
+    /* margin-left: 85px; */
 }
 
 .para {
     border: 2px solid;
-    width: 50%;
-    height: 25px;
+    width: 57%;
     color: white;
+    text-align: justify;
+    padding: 1% 4%;
+    margin-top: 5%;
 }
 
 .para p {
     color: rgb(23, 30, 48);
+}
+
+.imgDiv {
+    display: flex;
+    padding: 1%;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+    margin-top: 15px;
+}
+
+.headingDiv {
+   width: 66.5%;
+   border-bottom: 1px solid rgb(231, 232, 235);
+
+}
+.headPara {
+    font-size: 20px;
+    font-weight: 600;
+}
+.disPara {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: rgb(111, 117, 136)!important;
 }
