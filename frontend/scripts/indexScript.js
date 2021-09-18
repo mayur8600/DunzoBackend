@@ -1,3 +1,4 @@
+var userMob = [];
 var count = 0;
 function down() {
   count++;
@@ -70,34 +71,130 @@ window.onclick = function (event) {
 var pin1 = [];
 function otp() {
   var otp1 = document.getElementById("myInput1").value;
+  let formData = { mobile_no: document.getElementById("myInput1").value }
   var checkBox = document.getElementById("myCheck");
   var btn1 = document.getElementById("key");
   var btn2 = document.getElementById("key1");
   var otp3 = document.getElementById("this");
   console.log(otp3);
   if (otp1.length == 10 && checkBox.checked == true) {
-    let pin = Math.floor(Math.random() * 9000) + 1000;
-    otp3.style.display = "inherit";
-    btn1.style.display = "none";
-    btn2.style.display = "inherit";
-    console.log(pin);
-    alert(pin);
-    pin1.push(pin);
-  } else {
-    alert("Verify mobile Invalid or Check terms and conditions");
+
+    formData = JSON.stringify(formData);
+
+
+    ///////////////////////////---------------------
+
+    fetch('http://localhost:4455/users/', {
+      method: 'GET',
+      // body: formData,
+
+      //additional information about
+
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        // console.log('res:', res)
+        let val = res.filter((el) => (el.mobile_no  == +otp1))
+
+
+        if (val.length !== 0 ) {
+          userMob.push(val[0].mobile_no);
+          // console.log(val)
+          let pin = Math.floor(Math.random() * 9000) + 1000;
+                otp3.style.display = "inherit";
+                btn1.style.display = "none";
+                btn2.style.display = "inherit";
+                console.log(pin);
+                alert(pin);
+                pin1.push(pin);
+        }
+        else {
+
+
+
+
+
+
+          ///////--------------------------------------
+          fetch('http://localhost:4455/users/', {
+            method: 'POST',
+            body: formData,
+
+            //additional information about
+
+            headers: {
+              "Content-Type": "application/json",
+            }
+          })
+            .then((res) => {
+              return res.json();
+            })
+            .then((res) => {
+              // console.log('res:', res)
+              if (res.mobile_no != "") {
+                alert('u are registred to syatem')
+
+
+                let pin = Math.floor(Math.random() * 9000) + 1000;
+                otp3.style.display = "inherit";
+                btn1.style.display = "none";
+                btn2.style.display = "inherit";
+                console.log(pin);
+                alert(pin);
+                pin1.push(pin);
+
+
+
+
+              } else {
+                alert("Verify mobile Invalid or Check terms and conditions");
+              }
+
+              //     }
+              //     else {
+              //         alert('User Already Registered')
+              //     }
+              
+
+            })
+
+            // )
+                // console.log(u,t)
+
+            .catch((err) => {
+              console.log('err:', err)
+            })
+        }
+
+            // .catch((err) => {
+            //   console.log('err:', err)
+            // })
+
+      })
   }
 }
-function otpNew(){
-var otp2 = document.getElementById('myInput3').value
-var btn1 = document.getElementById("key")
-var btn2 = document.getElementById("key1")
-var otp3 = document.getElementById('this')
-if(pin1[pin1.length-1] == otp2){
-    otp3.style.display="none"
-    btn1.style.display="inherit"
-    btn2.style.display="none"
+
+///----------------------------------------------------------------
+
+///----------------------------------------------------------------
+
+function otpNew() {
+  var otp2 = document.getElementById('myInput3').value
+  var btn1 = document.getElementById("key")
+  var btn2 = document.getElementById("key1")
+  var otp3 = document.getElementById('this')
+  if (pin1[pin1.length - 1] == otp2) {
+    console.log(userMob)
+    otp3.style.display = "none"
+    btn1.style.display = "inherit"
+    btn2.style.display = "none"
     alert('Yay! Login Successfull')
-    window.location.href="../afterLogin_Page/afterLogin.html"
+    window.location.href = "../afterLogin_Page/afterLogin.html?" + userMob[userMob.length - 1]
     newModal.style.display = "none";
   } else {
     alert("OTP Provided by You is Invalid");
@@ -279,5 +376,3 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-
-function addToCart() {}

@@ -1,3 +1,6 @@
+var link = window.location.href.split("?");
+console.log(link[1]);
+document.getElementById('mobileNo').innerHTML= link[1]
 var count = 0;
     function down() {
         count++;
@@ -92,7 +95,8 @@ function user() {
     count1++;
   var k = document.getElementById("myDropdown")
   if (count1 % 2 == 1) {
-            k.style.display = 'inherit';
+            k.style.display = 'flex';
+            k.style.flexDirection = 'column';
         }
         else {
             k.style.display = 'none';
